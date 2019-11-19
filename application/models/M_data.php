@@ -10,6 +10,15 @@ class M_Data extends CI_Model
   {
     parent::__construct();
   }
+  function get_category(){
+    $query = $this->db->get('kategori');
+    return $query;  
+}
+
+function get_sub_category($category_id){
+    $query = $this->db->get_where('merek', array('kategori' => $category_id));
+    return $query;
+}
 
   // function getDataStockBlmJadi(){
   //   $this->datatables->select('id_barang,nama_barang,jumlah,user,tgl,supplier,biaya');
