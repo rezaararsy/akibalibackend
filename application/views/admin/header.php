@@ -10,7 +10,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>AdminLTE 3 | Starter</title>
+    <title>AkiBali</title>
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="<?php echo base_url();?>asset/plugins/fontawesome-free/css/all.min.css">
@@ -18,6 +18,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="<?php echo base_url();?>asset/dist/css/adminlte.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>asset/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -82,7 +84,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
                         <li class="nav-item ">
-                            <a href="dashboard.html" class="nav-link">
+                            <a href="<?php echo base_url(); ?>index.php/dashboard" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>
                                     Dashboard
@@ -90,7 +92,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                         </li>
                         <li class="nav-item " onclick="myFunction()">
-                            <a href="index.html" class="nav-link">
+                            <a href="<?php echo base_url(); ?>index.php/login/logout" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>
                                     Logout

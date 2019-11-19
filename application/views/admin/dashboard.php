@@ -22,18 +22,26 @@
     <div class="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-4 col-6">
                     <div class="small-box bg-info">
                         <div class="inner">
-                            <h4>Produk</h4>
-                        </div><a href="stock_bahan_baku.html" class="small-box-footer">More info <i
+                            <h4>Menu Produk</h4>
+                        </div><a href="<?php echo base_url(); ?>index.php/produk" class="small-box-footer">More info <i
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-4 col-6">
                     <div class="small-box bg-warning">
                         <div class="inner">
-                            <h4>Galeri</h4>
+                            <h4>Menu Galeri</h4>
+                        </div><a href="<?php echo base_url(); ?>index.php/galeri" class="small-box-footer">More info <i
+                                class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-6">
+                    <div class="small-box bg-danger">
+                        <div class="inner">
+                            <h4>Menu Merek</h4>
                         </div><a href="stock_bahan_baku.html" class="small-box-footer">More info <i
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
