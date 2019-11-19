@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div id="">
 	<h1>Diisi Frontend</h1>
-	Akses Adminnya Klik <a href="http://localhost/akibali/index.php/login">Login</a>
+	Akses Adminnya Klik <a href="<?php echo site_url();?>/login">Login</a>
 </div>
 
 </body>
