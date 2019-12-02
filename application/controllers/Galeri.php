@@ -8,8 +8,6 @@ class Galeri extends CI_Controller {
 	    $this->load->model('m_data');
 	    $this->load->helper('url');
 		$this->load->library('datatables');
-
-
 	  }
 	public function index()
 	{	
