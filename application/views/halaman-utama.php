@@ -48,13 +48,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
               <div class="col-5">
                 <div class="site-logo">
-                  <a href="index.html" class="font-weight-bold">AKI 24 Jam Bali</a>
+                  <a href="<?php echo base_url(). 'index.php/Welcome'; ?>" class="font-weight-bold">AKI 24 Jam Bali</a>
                 </div>
               </div>
 
               <div class="col-6 text-right topnav "style="padding: 0; margin: 0;" id="myTopNav">
                 <ul class="menu text-right">
-                  <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-none current py-3 px-4" href="index.html">Beranda</a></li>
+                  <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-none current py-3 px-4" href="<?php echo base_url(). 'index.php/Welcome'; ?>">Beranda</a></li>
                   <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-none py-3 px-3" href="produk.html">Produk</a></li>
                   <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-none py-3 px-3" href="#">Galeri</a></li>
                   <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-none py-3 px-3" href="kontak.html">Kontak</a></li>
@@ -65,7 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <span class="d-inline-block d-lg-block"><a href="#" class="text-white site-menu-toggle js-menu-toggle py-5 text-white"><span class="icon-menu h3 text-white"></span></a></span>
                 <nav class="site-navigation text-right ml-auto d-none d-lg-none" role="navigation">
                   <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                  <li class="active"><a href="index.html" class="nav-link">Beranda</a></li>
+                  <li class="active"><a href="<?php echo base_url(). 'index.php/Welcome'; ?>" class="nav-link">Beranda</a></li>
                   <li><a href="produk.html" class="nav-link">Produk</a></li>
                   <li><a href="#" class="nav-link">Galeri</a></li>
                   <li><a href="kontak.html" class="nav-link">Kontak</a></li>
