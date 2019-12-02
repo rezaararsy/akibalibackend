@@ -1,0 +1,20 @@
+// stylelint-disable declaration-no-important
+
+// Width and height
+
+@each $prop, $abbrev in (width: w, height: h) {
+  @each $size, $length in $sizes {
+    .#{$abbrev}-#{$size} { #{$prop}: $length !important; }
+  }
+}
+
+.mw-50 { max-width: 50% !important; }
+.mh-50 { max-height: 50% !important; }
+
+// Viewport additional helpers
+
+.min-vw-50 { min-width: 50vw !important; }
+.min-vh-50 { min-height: 50vh !important; }
+
+.vw-50 { width: 50vw !important; }
+.vh-50 { height: 50vh !important; }
