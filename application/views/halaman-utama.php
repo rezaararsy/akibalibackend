@@ -29,7 +29,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
-      
       <div class="site-wrap" id="home-section">
 
         <div class="site-mobile-menu site-navbar-target">
@@ -52,12 +51,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
               </div>
 
-              <div class="col-6 text-right topnav "style="padding: 0; margin: 0;" id="myTopNav">
+              <div class="col-6 text-right topnav" style="padding: 0; margin: 0;" id="myTopNav">
                 <ul class="menu text-right">
                   <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-none current py-3 px-4" href="<?php echo base_url(). 'index.php/Welcome'; ?>">Beranda</a></li>
-                  <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-none py-3 px-3" href="produk.html">Produk</a></li>
+                  <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-none py-3 px-3" href="<?php echo base_url(). 'index.php/halaman_produk'; ?>">Produk</a></li>
                   <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-none py-3 px-3" href="#">Galeri</a></li>
-                  <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-none py-3 px-3" href="kontak.html">Kontak</a></li>
+                  <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-none py-3 px-3" href="<?php echo base_url(). 'index.php/kontak'; ?>">Kontak</a></li>
                 </ul>
               </div>
 
@@ -66,9 +65,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <nav class="site-navigation text-right ml-auto d-none d-lg-none" role="navigation">
                   <ul class="site-menu main-menu js-clone-nav ml-auto ">
                   <li class="active"><a href="<?php echo base_url(). 'index.php/Welcome'; ?>" class="nav-link">Beranda</a></li>
-                  <li><a href="produk.html" class="nav-link">Produk</a></li>
+                  <li><a href="<?php echo base_url(). 'index.php/halaman_produk'; ?>" class="nav-link">Produk</a></li>
                   <li><a href="#" class="nav-link">Galeri</a></li>
-                  <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+                  <li><a href="<?php echo base_url(). 'index.php/kontak'; ?>" class="nav-link">Kontak</a></li>
                   </ul>
                 </nav>
               </div>
@@ -158,7 +157,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               
               <h2 class="h4 mb-4">Tentang Kami</h2>
               <p>Menjual Segala Macam Jenis Aki Untuk Segala Kendaraan. Baik Aki Mobil, Sepeda Motor, Truk, Bus, Kapal, Dan Lainnya. Pemasangan Gratis. Cek Aki Gratis. Menerima Pengiriman Di Wilayah Bali.</p>
-              <p><a href="#" class="btn btn-primary text-white px-5">Produk Kami</a></p>
+              <p><a href="<?php echo base_url(). 'index.php/halaman_produk'; ?>" class="btn btn-primary text-white px-5">Produk Kami</a></p>
             </div>
 
             <div class="col-md-2">
@@ -192,55 +191,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <span>Aki Orisinil Yang Sudah Teruji</span>
                   <span class="ml-auto icon-check" style="color:#01d28e;"></span>
               </div>
-              
             </div>
           </div>
         </div>
       </div>
-
   <!-- END .site-section -->
 
-      
-
-
-
       <footer class="site-footer">
-        <!-- <div class="container"> -->
-          <!-- <div class="row">
-            <div class="col-lg-3">
-              <h2 class="footer-heading mb-3">About Me</h2>
-                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-            </div>
-            <div class="col-lg-8 ml-auto">
-              <div class="row">
-                <div class="col-lg-6 ml-auto">
-                  <h2 class="footer-heading mb-4">Quick Links</h2>
-                  <ul class="list-unstyled">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Testimonials</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <h2 class="footer-heading mb-4">Connect</h2>
-                  <div class="social_29128 white mb-5">
-                    <a href="#"><span class="icon-whatsapp"></span></a>  
-                    <a href="#"><span class="icon-facebook"></span></a>  
-                    <a href="#"><span class="icon-instagram"></span></a>  
-                    <a href="#"><span class="icon-twitter"></span></a>  
-                  </div>
-                  <h2 class="footer-heading mb-4">Newsletter</h2>
-                  <form action="#" class="d-flex" class="subscribe">
-                    <input type="text" class="form-control mr-3" placeholder="Email">
-                    <input type="submit" value="Send" class="btn btn-primary">
-                  </form>
-                </div>
-                
-              </div>
-            </div>
-          </div> -->
           <div class="row mt-5 align-items-center justify-content-center text-center">
             <div class="col-md-12">
                 <p style="align-content: center;">
@@ -249,7 +206,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               </p>
             </div>
-
           </div>
         <!-- </div> -->
       </footer>

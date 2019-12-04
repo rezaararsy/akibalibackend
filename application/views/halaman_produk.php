@@ -45,15 +45,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div class="col-5 ">
               <div class="site-logo">
-                <a href="index.html" class="font-weight-bold" style="color: black;">AKI 24 Jam Bali</a>
+                <a href="<?php echo base_url(). 'index.php/Welcome'; ?>" class="font-weight-bold" style="color: black;">AKI 24 Jam Bali</a>
               </div>
             </div>
             <div class="col-6 text-right topnav "style="padding: 0; margin: 0;" id="myTopNav">
               <ul class="menu text-right">
-                <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-4" href="index.html">Beranda</a></li>
-                <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black current py-3 px-3" href="produk.html">Produk</a></li>
+                <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-4" href="<?php echo base_url(). 'index.php/Welcome'; ?>">Beranda</a></li>
+                <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black current py-3 px-3" href="<?php echo base_url(). 'index.php/halaman_produk'; ?>">Produk</a></li>
                 <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-3" href="#">Galeri</a></li>
-                <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-3" href="kontak.html">Kontak</a></li>
+                <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-3" href="<?php echo base_url(). 'index.php/kontak'; ?>">Kontak</a></li>
               </ul>
             </div>
 
@@ -61,10 +61,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <span class="d-inline-block d-lg-block"><a href="#" class="text-white site-menu-toggle js-menu-toggle py-5 text-black"><span class="icon-menu h3 text-black"></span></a></span>
               <nav class="site-navigation text-right ml-auto d-none d-lg-none" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                <li><a href="index.html" class="nav-link">Beranda</a></li>
-                <li class="active"><a href="produk.html" class="nav-link">Produk</a></li>
+                <li><a href="<?php echo base_url(). 'index.php/Welcome'; ?>" class="nav-link">Beranda</a></li>
+                <li class="active"><a href="<?php echo base_url(). 'index.php/halaman_produk'; ?>" class="nav-link">Produk</a></li>
                 <li><a href="#" class="nav-link">Galeri</a></li>
-                <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+                <li><a href="<?php echo base_url(). 'index.php/kontak'; ?>" class="nav-link">Kontak</a></li>
                 </ul>
               </nav>
             </div>
@@ -419,22 +419,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     </div>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery-migrate-3.0.0.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/bootstrap-datepicker.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/aos.js"></script>
+    <script src="<?php echo base_url();?>asset2/js/jquery-3.3.1.min.js"></script>
+    <script src="<?php echo base_url();?>asset2/js/jquery-migrate-3.0.0.js"></script>
+    <script src="<?php echo base_url();?>asset2/js/popper.min.js"></script>
+    <script src="<?php echo base_url();?>asset2/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url();?>asset2/js/owl.carousel.min.js"></script>
+    <script src="<?php echo base_url();?>asset2/js/jquery.sticky.js"></script>
+    <script src="<?php echo base_url();?>asset2/js/jquery.waypoints.min.js"></script>
+    <script src="<?php echo base_url();?>asset2/js/jquery.animateNumber.min.js"></script>
+    <script src="<?php echo base_url();?>asset2/js/jquery.fancybox.min.js"></script>
+    <script src="<?php echo base_url();?>asset2/js/jquery.stellar.min.js"></script>
+    <script src="<?php echo base_url();?>asset2/js/jquery.easing.1.3.js"></script>
+    <script src="<?php echo base_url();?>asset2/js/bootstrap-datepicker.min.js"></script>
+    <script src="<?php echo base_url();?>asset2/js/isotope.pkgd.min.js"></script>
+    <script src="<?php echo base_url();?>asset2/js/aos.js"></script>
 
-    <script src="js/main.js"></script>
+    <script src="<?php echo base_url();?>asset2/js/main.js"></script>
 
   </body>
 
