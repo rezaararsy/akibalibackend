@@ -1,8 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?><!doctype html>
+?>
+<!doctype html>
 <html lang="en">
-     <head>
+
+    <head>
         <title>AKI 24 Jam Bali | Produk</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,6 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="<?php echo base_url();?>asset2/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>asset2/fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="<?php echo base_url();?>asset2/css/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="<?php echo base_url();?>asset2/css/style.css">
@@ -44,26 +47,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="row align-items-center position-relative ">
 
             <div class="col-5 ">
-              <div class="site-logo">
-                <a href="<?php echo base_url(). 'index.php/Welcome'; ?>" class="font-weight-bold" style="color: black;">AKI 24 Jam Bali</a>
+              <div class="site-logo black">
+                <a href="<?php echo base_url(). 'index.php/Welcome'; ?>" class="font-weight-bold">AKI 24 Jam Bali</a>
               </div>
             </div>
-            <div class="col-6 text-right topnav "style="padding: 0; margin: 0;" id="myTopNav">
+            <div class="col-6 text-right topnav" id="myTopNav">
               <ul class="menu text-right">
                 <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-4" href="<?php echo base_url(). 'index.php/Welcome'; ?>">Beranda</a></li>
                 <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black current py-3 px-3" href="<?php echo base_url(). 'index.php/halaman_produk'; ?>">Produk</a></li>
-                <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-3" href="#">Galeri</a></li>
+                <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-3" href="<?php echo base_url(). 'index.php/halaman_galeri'; ?>">Galeri</a></li>
                 <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-3" href="<?php echo base_url(). 'index.php/kontak'; ?>">Kontak</a></li>
               </ul>
             </div>
 
-            <div class="col-1 text-left topbar" style="padding: 0; margin: 0;color:black">
+            <div class="col-1 text-left topbar black">
               <span class="d-inline-block d-lg-block"><a href="#" class="text-white site-menu-toggle js-menu-toggle py-5 text-black"><span class="icon-menu h3 text-black"></span></a></span>
               <nav class="site-navigation text-right ml-auto d-none d-lg-none" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
                 <li><a href="<?php echo base_url(). 'index.php/Welcome'; ?>" class="nav-link">Beranda</a></li>
                 <li class="active"><a href="<?php echo base_url(). 'index.php/halaman_produk'; ?>" class="nav-link">Produk</a></li>
-                <li><a href="#" class="nav-link">Galeri</a></li>
+                <li><a href="<?php echo base_url(). 'index.php/halaman_galeri'; ?>" class="nav-link">Galeri</a></li>
                 <li><a href="<?php echo base_url(). 'index.php/kontak'; ?>" class="nav-link">Kontak</a></li>
                 </ul>
               </nav>
@@ -74,25 +77,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <!--Kategori Mobil-->
     <div class="site-section">
-      <div class="container martop">
-        <div class="row"> 
-          <div class="col-6" style="margin-bottom: 10px;">
+      <div class="container martop mb-4">
+        <div class="row animated fadeIn "> 
+          <div class="col-6 mb-2" >
             <h4>Mobil</h4>  
           </div>
-          <div class="col-6 text-right topnav" style="margin-bottom: 10px;">
+          <div class="col-6 text-right topnav mb-2">
             <a href="#" class="btn btn-primary text-white px-3 py-1" style="font-weight: lighter;">Lihat lainnya</a>  
           </div>
         </div>
         <div class="col-md-12">
-          <div class="row">
+          <div class="row animated zoomIn">
               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4">
               <div class="uk-card">
-                <a href="produk-detail.html">
+                <a href="<?php echo base_url(). 'index.php/detail_produk'; ?>">
                 <img src="<?php echo base_url();?>asset2/images/vs.jpg" alt="Image" class="img-card"> 
                 <div class="card-container">
                   <div class="card-title ">NS 40 ZL </div> 
                   <div class="d-flex">
-                      <span class="col-md-6 text-left card-merk" style="margin-left: 0; padding-left: 0;">Yuasa</span>
+                      <span class="col-md-6 text-left card-merk">Yuasa</span>
                       <span class="col-md-6 text-center card-tag">Mobil</span>
                     </div> 
                   <div class="card-price">Rp. 100.000</div>
@@ -103,13 +106,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4">
               <div class="uk-card">
-                <a href="produk-detail.html">
+                <a href="<?php echo base_url(). 'index.php/detail_produk'; ?>">
                   <img src="<?php echo base_url();?>asset2/images/fb1.jpg" alt="Image"
                   class="img-card"> 
                   <div class="card-container">
                     <div class="card-title ">NS 40 ZL </div> 
                     <div class="d-flex">
-                        <span class="col-md-6 text-left card-merk" style="margin-left: 0; padding-left: 0;">Yuasa</span>
+                        <span class="col-md-6 text-left card-merk">Yuasa</span>
                         <span class="col-md-6 text-center card-tag">Mobil</span>
                       </div> 
                     <div class="card-price">Rp. 100.000</div>
@@ -120,13 +123,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4">
               <div class="uk-card">
-                <a href="produk-detail.html">
+                <a href="<?php echo base_url(). 'index.php/detail_produk'; ?>">
                   <img src="<?php echo base_url();?>asset2/images/fb2.jpg" alt="Image"
                   class="img-card"> 
                   <div class="card-container">
                     <div class="card-title ">NS 40 ZL </div> 
                     <div class="d-flex">
-                        <span class="col-md-6 text-left card-merk" style="margin-left: 0; padding-left: 0;">Yuasa</span>
+                        <span class="col-md-6 text-left card-merk">Yuasa</span>
                         <span class="col-md-6 text-center card-tag">Mobil</span>
                       </div> 
                     <div class="card-price">Rp. 100.000</div>
@@ -137,13 +140,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4">
               <div class="uk-card">
-                <a href="produk-detail.html">
+                <a href="<?php echo base_url(). 'index.php/detail_produk'; ?>">
                   <img src="<?php echo base_url();?>asset2/images/fb2.jpg" alt="Image"
                   class="img-card"> 
                   <div class="card-container">
                     <div class="card-title ">NS 40 ZL </div> 
                     <div class="d-flex">
-                        <span class="col-md-6 text-left card-merk" style="margin-left: 0; padding-left: 0;">Yuasa</span>
+                        <span class="col-md-6 text-left card-merk">Yuasa</span>
                         <span class="col-md-6 text-center card-tag">Mobil</span>
                       </div> 
                     <div class="card-price">Rp. 100.000</div>
@@ -156,26 +159,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
     
   <!--Kategori Motor-->
-      <div class="container" style="padding-top: 30px;">
-        <div class="row">
-          <div class="col-6" style="margin-bottom: 10px;">
+      <div class="container mb-4">
+        <div class="row animated fadeIn">
+          <div class="col-6 mb-2">
             <h4>Motor</h4>  
           </div>
-          <div class="col-6 text-right topnav" style="margin-bottom: 10px;">
+          <div class="col-6 text-right topnav mb-2">
             <a href="#" class="btn btn-primary text-white px-3 py-1" style="font-weight: lighter;">Lihat lainnya</a>  
           </div>
         </div>
         <div class="col-md-12">
-          <div class="row">
+          <div class="row animated zoomIn">
               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4">
               <div class="uk-card">
-                <a href="produk-detail.html">
+                <a href="<?php echo base_url(). 'index.php/detail_produk'; ?>">
                 <img src="<?php echo base_url();?>asset2/images/vs.jpg" alt="Image" class="img-card"> 
                 <div class="card-container">
                   <div class="card-title ">NS 40 ZL </div> 
                   <div class="d-flex">
-                      <span class="col-md-6 text-left card-merk" style="margin-left: 0; padding-left: 0;">Yuasa</span>
-                      <span class="col-md-6 text-center card-tag">Mobil</span>
+                      <span class="col-md-6 text-left card-merk">Yuasa</span>
+                      <span class="col-md-6 text-center card-tag">Motor</span>
                     </div> 
                   <div class="card-price">Rp. 100.000</div>
                 </div>
@@ -185,14 +188,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4">
               <div class="uk-card">
-                <a href="produk-detail.html">
+                <a href="<?php echo base_url(). 'index.php/detail_produk'; ?>">
                   <img src="<?php echo base_url();?>asset2/images/fb1.jpg" alt="Image"
                   class="img-card"> 
                   <div class="card-container">
                     <div class="card-title ">NS 40 ZL </div> 
                     <div class="d-flex">
-                        <span class="col-md-6 text-left card-merk" style="margin-left: 0; padding-left: 0;">Yuasa</span>
-                        <span class="col-md-6 text-center card-tag">Mobil</span>
+                        <span class="col-md-6 text-left card-merk">Yuasa</span>
+                        <span class="col-md-6 text-center card-tag">Motor</span>
                       </div> 
                     <div class="card-price">Rp. 100.000</div>
                     </div>
@@ -202,14 +205,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4">
               <div class="uk-card">
-                <a href="produk-detail.html">
+                <a href="<?php echo base_url(). 'index.php/detail_produk'; ?>">
                   <img src="<?php echo base_url();?>asset2/images/fb2.jpg" alt="Image"
                   class="img-card"> 
                   <div class="card-container">
                     <div class="card-title ">NS 40 ZL </div> 
                     <div class="d-flex">
-                        <span class="col-md-6 text-left card-merk" style="margin-left: 0; padding-left: 0;">Yuasa</span>
-                        <span class="col-md-6 text-center card-tag">Mobil</span>
+                        <span class="col-md-6 text-left card-merk">Yuasa</span>
+                        <span class="col-md-6 text-center card-tag">Motor</span>
                       </div> 
                     <div class="card-price">Rp. 100.000</div>
                   </div>
@@ -219,14 +222,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4">
               <div class="uk-card">
-                <a href="produk-detail.html">
+                <a href="<?php echo base_url(). 'index.php/detail_produk'; ?>">
                   <img src="<?php echo base_url();?>asset2/images/fb2.jpg" alt="Image"
                   class="img-card"> 
                   <div class="card-container">
                     <div class="card-title ">NS 40 ZL </div> 
                     <div class="d-flex">
-                        <span class="col-md-6 text-left card-merk" style="margin-left: 0; padding-left: 0;">Yuasa</span>
-                        <span class="col-md-6 text-center card-tag">Mobil</span>
+                        <span class="col-md-6 text-left card-merk">Yuasa</span>
+                        <span class="col-md-6 text-center card-tag">Motor</span>
                       </div> 
                     <div class="card-price">Rp. 100.000</div>
                   </div>
@@ -238,26 +241,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 
   <!--Kategori Truk-->
-      <div class="container" style="padding-top: 30px;">  
-        <div class="row">
-          <div class="col-6" style="margin-bottom: 10px;">
+      <div class="container mb-4">  
+        <div class="row animated fadeIn">
+          <div class="col-6 mb-2">
             <h4>Truk</h4>  
           </div>
-          <div class="col-6 text-right topnav" style="margin-bottom: 10px;">
+          <div class="col-6 text-right topnav mb-2">
             <a href="#" class="btn btn-primary text-white px-3 py-1" style="font-weight: lighter;">Lihat lainnya</a>  
           </div>
         </div>
         <div class="col-md-12">
-          <div class="row">
+          <div class="row animated zoomIn">
               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4">
               <div class="uk-card">
-                <a href="produk-detail.html">
+                <a href="<?php echo base_url(). 'index.php/detail_produk'; ?>">
                 <img src="<?php echo base_url();?>asset2/images/vs.jpg" alt="Image" class="img-card"> 
                 <div class="card-container">
                   <div class="card-title ">NS 40 ZL </div> 
                   <div class="d-flex">
-                      <span class="col-md-6 text-left card-merk" style="margin-left: 0; padding-left: 0;">Yuasa</span>
-                      <span class="col-md-6 text-center card-tag">Mobil</span>
+                      <span class="col-md-6 text-left card-merk">Yuasa</span>
+                      <span class="col-md-6 text-center card-tag">Truk</span>
                     </div> 
                   <div class="card-price">Rp. 100.000</div>
                 </div>
@@ -267,14 +270,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4">
               <div class="uk-card">
-                <a href="produk-detail.html">
+                <a href="<?php echo base_url(). 'index.php/detail_produk'; ?>">
                   <img src="<?php echo base_url();?>asset2/images/fb1.jpg" alt="Image"
                   class="img-card"> 
                   <div class="card-container">
                     <div class="card-title ">NS 40 ZL </div> 
                     <div class="d-flex">
-                        <span class="col-md-6 text-left card-merk" style="margin-left: 0; padding-left: 0;">Yuasa</span>
-                        <span class="col-md-6 text-center card-tag">Mobil</span>
+                        <span class="col-md-6 text-left card-merk">Yuasa</span>
+                        <span class="col-md-6 text-center card-tag">Truk</span>
                       </div> 
                     <div class="card-price">Rp. 100.000</div>
                     </div>
@@ -284,14 +287,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4">
               <div class="uk-card">
-                <a href="produk-detail.html">
+                <a href="<?php echo base_url(). 'index.php/detail_produk'; ?>">
                   <img src="<?php echo base_url();?>asset2/images/fb2.jpg" alt="Image"
                   class="img-card">
                 <div class="card-container">
                   <div class="card-title ">NS 40 ZL </div> 
                   <div class="d-flex">
-                      <span class="col-md-6 text-left card-merk" style="margin-left: 0; padding-left: 0;">Yuasa</span>
-                      <span class="col-md-6 text-center card-tag">Mobil</span>
+                      <span class="col-md-6 text-left card-merk">Yuasa</span>
+                      <span class="col-md-6 text-center card-tag">Truk</span>
                     </div> 
                   <div class="card-price">Rp. 100.000</div>
                 </div>
@@ -301,14 +304,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4">
               <div class="uk-card">
-                <a href="produk-detail.html">
+                <a href="<?php echo base_url(). 'index.php/detail_produk'; ?>">
                   <img src="<?php echo base_url();?>asset2/images/fb2.jpg" alt="Image"
                   class="img-card"> 
                 <div class="card-container">
                   <div class="card-title ">NS 40 ZL </div> 
                   <div class="d-flex">
-                      <span class="col-md-6 text-left card-merk" style="margin-left: 0; padding-left: 0;">Yuasa</span>
-                      <span class="col-md-6 text-center card-tag">Mobil</span>
+                      <span class="col-md-6 text-left card-merk">Yuasa</span>
+                      <span class="col-md-6 text-center card-tag">Truk</span>
                     </div> 
                   <div class="card-price">Rp. 100.000</div>
                 </div>
@@ -320,26 +323,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 
   <!--Kategori Aksesoris-->
-      <div class="container" style="padding-top: 30px;">  
-        <div class="row">
-          <div class="col-6" style="margin-bottom: 10px;">
+      <div class="container mb-4" >  
+        <div class="row animated fadeIn">
+          <div class="col-6 mb-2">
             <h4>Aksesoris</h4>  
           </div>
-          <div class="col-6 text-right topnav" style="margin-bottom: 10px;">
+          <div class="col-6 text-right topnav mb-2">
             <a href="#" class="btn btn-primary text-white px-3 py-1" style="font-weight: lighter;">Lihat lainnya</a>  
           </div>
         </div>
         <div class="col-md-12">
-          <div class="row">
+          <div class="row animated zoomIn">
               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4">
               <div class="uk-card">
-                <a href="produk-detail.html">
+                <a href="<?php echo base_url(). 'index.php/detail_produk'; ?>">
                 <img src="<?php echo base_url();?>asset2/images/vs.jpg" alt="Image" class="img-card">
               <div class="card-container">
                 <div class="card-title ">NS 40 ZL </div> 
                 <div class="d-flex">
-                    <span class="col-md-6 text-left card-merk" style="margin-left: 0; padding-left: 0;">Yuasa</span>
-                    <span class="col-md-6 text-center card-tag">Mobil</span>
+                    <span class="col-md-6 text-left card-merk">Yuasa</span>
+                    <span class="col-md-6 text-center card-tag">Aksesoris</span>
                   </div> 
                 <div class="card-price">Rp. 100.000</div>
               </div>
@@ -349,14 +352,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4">
               <div class="uk-card">
-                <a href="produk-detail.html">
+                <a href="<?php echo base_url(). 'index.php/detail_produk'; ?>">
                   <img src="<?php echo base_url();?>asset2/images/fb1.jpg" alt="Image"
                   class="img-card"> 
                 <div class="card-container">
                   <div class="card-title ">NS 40 ZL </div> 
                   <div class="d-flex">
-                      <span class="col-md-6 text-left card-merk" style="margin-left: 0; padding-left: 0;">Yuasa</span>
-                      <span class="col-md-6 text-center card-tag">Mobil</span>
+                      <span class="col-md-6 text-left card-merk">Yuasa</span>
+                      <span class="col-md-6 text-center card-tag">Aksesoris</span>
                     </div> 
                   <div class="card-price">Rp. 100.000</div>
                 </div>
@@ -366,14 +369,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4">
               <div class="uk-card">
-                <a href="produk-detail.html">
+                <a href="<?php echo base_url(). 'index.php/detail_produk'; ?>">
                   <img src="<?php echo base_url();?>asset2/images/fb2.jpg" alt="Image"
                   class="img-card"> 
                 <div class="card-container">
                   <div class="card-title ">NS 40 ZL </div> 
                   <div class="d-flex">
-                      <span class="col-md-6 text-left card-merk" style="margin-left: 0; padding-left: 0;">Yuasa</span>
-                      <span class="col-md-6 text-center card-tag">Mobil</span>
+                      <span class="col-md-6 text-left card-merk">Yuasa</span>
+                      <span class="col-md-6 text-center card-tag">Aksesoris</span>
                     </div>
                   <div class="card-price">Rp. 100.000</div>
                 </div>
@@ -383,14 +386,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4">
               <div class="uk-card">
-                <a href="produk-detail.html">
+                <a href="<?php echo base_url(). 'index.php/detail_produk'; ?>">
                   <img src="<?php echo base_url();?>asset2/images/fb2.jpg" alt="Image"
                   class="img-card"> 
                 <div class="card-container">
                   <div class="card-title ">NS 40 ZL </div>
                   <div class="d-flex">
-                    <span class="col-md-6 text-left card-merk" style="margin-left: 0; padding-left: 0;">Yuasa</span>
-                    <span class="col-md-6 text-center card-tag">Mobil</span>
+                    <span class="col-md-6 text-left card-merk">Yuasa</span>
+                    <span class="col-md-6 text-center card-tag">Aksesoris</span>
                   </div> 
                   <div class="card-price">Rp. 100.000</div>
                 </div>
@@ -408,7 +411,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <footer class="site-footer">
       <div class="row align-items-center justify-content-center text-center">
         <div class="col-md-12">
-            <p style="align-content: center;">
+            <p>
           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           Copyright &copy;<script>document.write(new Date().getFullYear());</script> AKI 24 Jam Bali
           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -439,4 +442,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </body>
 
 </html>
-

@@ -27,6 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="<?php echo base_url();?>asset2/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>asset2/fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="<?php echo base_url();?>asset2/css/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="<?php echo base_url();?>asset2/css/style.css">
@@ -54,42 +55,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="row align-items-center position-relative ">
 
             <div class="col-5 ">
-              <div class="site-logo">
-                <a href="<?php echo base_url(). 'index.php/Welcome'; ?>" class="font-weight-bold" style="color: black;">AKI 24 Jam Bali</a>
+              <div class="site-logo black">
+                <a href="<?php echo base_url(). 'index.php/Welcome'; ?>" class="font-weight-bold">AKI 24 Jam Bali</a>
               </div>
             </div>
-            <div class="col-6 text-right topnav "style="padding: 0; margin: 0;" id="myTopNav">
+            <div class="col-6 text-right topnav" id="myTopNav">
               <ul class="menu text-right">
                 <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-4" href="<?php echo base_url(). 'index.php/Welcome'; ?>">Beranda</a></li>
                 <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-3" href="<?php echo base_url(). 'index.php/halaman_produk'; ?>">Produk</a></li>
-                <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-3" href="#">Galeri</a></li>
+                <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-3" href="<?php echo base_url(). 'index.php/halaman_galeri'; ?>">Galeri</a></li>
                 <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black current py-3 px-3" href="<?php echo base_url(). 'index.php/kontak'; ?>">Kontak</a></li>
               </ul>
             </div>
 
-            <div class="col-1 text-left topbar" style="padding: 0; margin: 0;color:black">
+            <div class="col-1 text-left topbar black">
               <span class="d-inline-block d-lg-block"><a href="#" class="text-white site-menu-toggle js-menu-toggle py-5 text-black"><span class="icon-menu h3 text-black"></span></a></span>
               <nav class="site-navigation text-right ml-auto d-none d-lg-none" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
                 <li><a href="<?php echo base_url(). 'index.php/Welcome'; ?>" class="nav-link">Beranda</a></li>
                 <li><a href="<?php echo base_url(). 'index.php/halaman_produk'; ?>" class="nav-link">Produk</a></li>
-                <li><a href="#" class="nav-link">Galeri</a></li>
+                <li><a href="<?php echo base_url(). 'index.php/halaman_galeri'; ?>" class="nav-link">Galeri</a></li>
                 <li class="active"><a href="<?php echo base_url(). 'index.php/kontak'; ?>" class="nav-link">Kontak</a></li>
                 </ul>
               </nav>
             </div>
-
-            
           </div>
         </div>
-
       </header>
 
-  
    <div class="site-section">
       <div class="container martop">
-        <div class="row">
-          <div class="col-lg-8 mb-5" >
+        <div class="row ">
+          <div class="col-lg-8 mb-5 animated fadeInDown" >
               <!--The div element for the map -->
               <div id="map"></div>
               <script>
@@ -104,12 +101,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   var marker = new google.maps.Marker({position: uluru, map: map});
                 }
               </script>
-                <!--Load the API from the specified URL
-                * The async attribute allows the browser to render the page while the API loads
-                * The key parameter will contain your own API key (which is not needed for this tutorial)
-                * The callback parameter executes the initMap() function
-                -->
-                <!-- tinggal ganti API key nya aja -->
               <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBua-FDUL4F9yeiYy7xeRmKaslqXdN-vVg&callback=initMap">
               </script>
@@ -117,28 +108,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
           <div class="col-lg-4 ml-auto">
             <div class="bg-white p-3 p-md-5">
-              <h3 class="text-black mb-4">Info Kontak</h3>
+              <h3 class="text-black mb-4 animated fadeInDown">Info Kontak</h3>
               <ul class="list-unstyled footer-link">
-                <li class="d-block mb-3">
+                <li class="d-block mb-3 animated fadeInDown">
                   <span class="d-block text-black">Lokasi Toko:</span>
                   <span>Jln. Ngurah Rai 69 Kediri Tabanan</span></li>
-                <li class="d-block mb-3"><span class="d-block text-black">Nomor Telepon:</span><span>08123813654 / 085101409700</span></li>
-                <li class="d-block mb-3"><a href="#" class="btn btn-primary text-white px-5">Whatsapp</span></a></li>
-                <li class="d-block mb-3"><a href="https://goo.gl/maps/VnTqeve19ff3yGQ49" class="btn btn-primary text-white px-4">Buka Google Map</a></li>
+                <li class="d-block mb-3 animated fadeInDown"><span class="d-block text-black">Nomor Telepon:</span><span>08123813654 / 085101409700</span></li>
+                <li class="d-block mb-3 animated zoomIn"><a href="#" class="btn btn-primary text-white px-5">Whatsapp</span></a></li>
+                <li class="d-block mb-3 animated zoomIn"><a href="https://goo.gl/maps/VnTqeve19ff3yGQ49" class="btn btn-primary text-white px-4">Buka Google Map</a></li>
               </ul>
             </div>
           </div>
         </div>
-        
       </div>
     </div> <!-- END .site-section -->
     
-    
-
     <footer class="site-footer">
         <div class="row mt-5 align-items-center justify-content-center text-center">
           <div class="col-md-12">
-              <p style="align-content: center;">
+              <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             Copyright &copy;<script>document.write(new Date().getFullYear());</script> AKI 24 Jam Bali
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -169,4 +157,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </body>
 
 </html>
-
