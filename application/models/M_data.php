@@ -150,7 +150,7 @@ function get_sub_category($category_id){
         return $hasil->result();
   }
   function getDataDetil($id){
-    $hasil=$this->db->query("SELECT * FROM produk WHERE id='$id'");
+    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE id='$id'");
         return $hasil->result();
   }
   function getMerekMotor(){

@@ -36,4 +36,9 @@ class Halaman_produk extends CI_Controller {
 		$data['aksesoris'] = $this->m_data->getDaftarAksesoris();
 		$this->load->view('halaman_produk',$data);
 	}
+	public function detail(){
+		$id = $this->uri->segment(3);
+		$data['hasil'] = $this->m_data->getDataDetil($id);
+		$this->load->view('detail-produk',$data);
+	}
 }

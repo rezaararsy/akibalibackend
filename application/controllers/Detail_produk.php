@@ -19,7 +19,8 @@ class Detail_produk extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{
-		$this->load->view('detail-produk');
+	{	$id = $this->uri->segment(3);
+		$data['hasil'] = $this->m_data->getDataDetil($id);
+		$this->load->view('detail-produk',$data);
 	}
 }
