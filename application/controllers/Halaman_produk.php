@@ -3,6 +3,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Halaman_produk extends CI_Controller {
 
+	function __construct()
+	{
+	    parent::__construct();
+	    $this->load->model('m_data');
+	    $this->load->helper('url');
+		$this->load->library('datatables');
+
+
+	  }
+
 	/**
 	 * Index Page for this controller.
 	 *
@@ -19,7 +29,11 @@ class Halaman_produk extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{
-		$this->load->view('halaman_produk');
+	{	
+		$data['mobil'] = $this->m_data->getDaftarMobil();
+		$data['motor'] = $this->m_data->getDaftarMotor();
+		$data['truck'] = $this->m_data->getDaftarTruck();
+		$data['aksesoris'] = $this->m_data->getDaftarAksesoris();
+		$this->load->view('halaman_produk',$data);
 	}
 }
