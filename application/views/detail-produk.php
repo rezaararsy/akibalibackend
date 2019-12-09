@@ -58,7 +58,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-3" href="<?php echo base_url(). 'index.php/kontak'; ?>">Kontak</a></li>
                 </ul>
               </div>
-
+               
+                                                
+												
               <div class="col-1 text-left topbar black">
                 <span class="d-inline-block d-lg-block"><a href="#" class="text-white site-menu-toggle js-menu-toggle py-5 text-black"><span class="icon-menu h3 text-black"></span></a></span>
                 <nav class="site-navigation text-right ml-auto d-none d-lg-none" role="navigation">
@@ -73,7 +75,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
           </div>
         </header>
-
+        <?php
+        	foreach($hasil as $d)
+            {  
+              ?>
         <div class="site-section">
       <div class="container martop" >     
           <div class="row">
@@ -88,24 +93,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="row">
           <div class="col-lg-6 col-md-6 mb-5">
             <div class="uk-card-detail">
-                <img src="<?php echo base_url();?>asset2/images/vs2.jpg" alt="Image">
+                <img src="<?php echo base_url();?><?php echo $d->gambar; ?>" alt="Image">
             </div>  
           </div>     
           <div class="col-lg-6 col-md-6 mb-5">
             <div class="card-info">
-              <div class="card-title">NS 40 ZL </div>
-              <div class="card-merk">Yuasa</div>
+              <div class="card-title"><?php echo $d->nama;?></div>
+              <div class="card-merk"><?php echo $d->merek;?></div>
               <div class="d-flex">
                 <span class="icon-circle icon-green"></span>
                 <span class="card-tag">Mobil</span>
               </div>
-              <div class="card-isi">AKI KERING ORIGINAL</div>
-              <div class="card-price"><strong>Rp. 100.000</strong></div>    
+              <div class="card-isi"><?php echo $d->keterangan;?></div>
+              <div class="card-price"><strong>Rp. <?php echo $d->harga;?></strong></div>    
             </div>
           </div> 
         </div>
     </div>
-    
+    <?php 
+				                    
+        }
+		 ?>
     <div class="container" >
       <h4>Produk serupa</h4>        
       <div class="col-md-12">
