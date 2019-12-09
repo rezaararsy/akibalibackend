@@ -3,6 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Halaman_galeri extends CI_Controller {
 
+	function __construct()
+	{
+	    parent::__construct();
+	    $this->load->model('m_data');
+	    $this->load->helper('url');
+		
+	  }
 	/**
 	 * Index Page for this controller.
 	 *
@@ -20,6 +27,7 @@ class Halaman_galeri extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('halaman-galeri');
+		$data['galeri'] = $this->m_data->getDaftarGambar();
+		$this->load->view('halaman-galeri',$data);
 	}
 }

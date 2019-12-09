@@ -120,7 +120,10 @@ function get_sub_category($category_id){
     $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.kategori=4 AND merk='$id'");
         return $hasil->result();
   }
-
+  function getDaftarGambar(){
+    $hasil=$this->db->query("SELECT * FROM galeri");
+        return $hasil->result();
+  }
 
 
 

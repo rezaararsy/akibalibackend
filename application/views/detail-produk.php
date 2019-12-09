@@ -84,8 +84,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="row">
               <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
-                    <li class="breadcrumb-item"><a href="produk.html">Produk</a></li>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url(). 'index.php/Welcome'; ?>">Beranda</a></li>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url(). 'index.php/halaman_produk'; ?>">Produk</a></li>
                     <li class="breadcrumb-item active" aria-current="page">NS 40 ZL</li>
                   </ol>
                 </nav>

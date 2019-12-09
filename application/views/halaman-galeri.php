@@ -88,59 +88,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
         <div class="row">
+
+        <?php
+        foreach($galeri as $d)
+          {
+        ?>
+
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="item web">
-              <a href="<?php echo base_url();?>asset2/images/Gforce1.jpg" class="item-wrap" data-fancybox="gal">
+              <a href="<?php echo base_url();?><?php echo $d->gambar; ?>" class="item-wrap" data-fancybox="gal">
                 <span class=""></span>
-                <img class="img" src="<?php echo base_url();?>asset2/images/Gforce1.jpg">
+                <img class="img" src="<?php echo base_url();?><?php echo $d->gambar; ?>">
               </a>
             </div>
           </div>
+          
+          <?php
+          }
+          ?>
 
-          <div class="col-md-6 col-lg-4 mb-4">
+          <!-- <div class="col-md-6 col-lg-4 mb-4">
             <div class="item web">
               <a href="<?php echo base_url();?>asset2/images/GS2.jpg" class="item-wrap" data-fancybox="gal">
                 <span class=""></span>
                 <img class="img" src="<?php echo base_url();?>asset2/images/GS2.jpg">
               </a>
             </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="item web">
-              <a href="<?php echo base_url();?>asset2/images/vs.jpg" class="item-wrap" data-fancybox="gal">
-                <span class=""></span>
-                <img class="img" src="<?php echo base_url();?>asset2/images/vs.jpg">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="item web">
-              <a href="<?php echo base_url();?>asset2/images/yuasa1.jpg" class="item-wrap" data-fancybox="gal">
-                <span class=""></span>
-                <img class="img" src="<?php echo base_url();?>asset2/images/yuasa1.jpg">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="item web">
-              <a href="<?php echo base_url();?>asset2/images/ns1.jpg" class="item-wrap" data-fancybox="gal">
-                <span class=""></span>
-                <img class="img" src="<?php echo base_url();?>asset2/images/ns1.jpg">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="item web">
-              <a href="<?php echo base_url();?>asset2/images/incoe.jpg" class="item-wrap" data-fancybox="gal">
-                <span class=""></span>
-                <img class="img" src="<?php echo base_url();?>asset2/images/incoe.jpg">
-              </a>
-            </div>
-          </div>
+          </div> -->
 
         </div>
 
