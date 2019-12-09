@@ -1595,7 +1595,7 @@ h1, h2, h3, h4, h5,
     background-position: 50% 50%;
     background-repeat:   no-repeat;
     background-size:     cover;
-}s
+}
 
 .img-years {
   position: relative;
@@ -1849,6 +1849,7 @@ h1, h2, h3, h4, h5,
   height: 15vw;
   object-fit: cover;
   border-radius: 10px;
+  min-height: 150px;
 }
 .img-card-next{
   width: 60%;
