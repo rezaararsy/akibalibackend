@@ -23,7 +23,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="<?php echo base_url();?>asset2/css/style.css">
+    <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
+    </style>
   </head>
 
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
