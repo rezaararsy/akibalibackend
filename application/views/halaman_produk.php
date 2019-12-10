@@ -90,7 +90,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <h4>Mobil</h4>
           </div>
           <div class="col-6 text-right topnav mb-2">
-            <a href="#" class="btn btn-primary text-white px-3 py-1" style="font-weight: lighter;">Lihat lainnya</a>
+            <a href="<?php echo base_url(); ?>index.php/halaman_produk/kategori" class="btn btn-primary text-white px-3 py-1" style="font-weight: lighter;">Lihat lainnya</a>
           </div>
         </div>
         <div class="col-md-12">
@@ -147,7 +147,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <h4>Motor</h4>
           </div>
           <div class="col-6 text-right topnav mb-2">
-            <a href="#" class="btn btn-primary text-white px-3 py-1" style="font-weight: lighter;">Lihat lainnya</a>
+            <a href="<?php echo base_url(); ?>index.php/halaman_produk/kategori" class="btn btn-primary text-white px-3 py-1" style="font-weight: lighter;">Lihat lainnya</a>
           </div>
         </div>
         <div class="col-md-12">
@@ -188,7 +188,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <h4>Truk</h4>
           </div>
           <div class="col-6 text-right topnav mb-2">
-            <a href="#" class="btn btn-primary text-white px-3 py-1" style="font-weight: lighter;">Lihat lainnya</a>
+            <a href="<?php echo base_url(); ?>index.php/halaman_produk/kategori" class="btn btn-primary text-white px-3 py-1" style="font-weight: lighter;">Lihat lainnya</a>
           </div>
         </div>
         <div class="col-md-12">
@@ -229,7 +229,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <h4>Aksesoris</h4>
           </div>
           <div class="col-6 text-right topnav mb-2">
-            <a href="#" class="btn btn-primary text-white px-3 py-1" style="font-weight: lighter;">Lihat lainnya</a>
+            <a href="<?php echo base_url(); ?>index.php/halaman_produk/kategori" class="btn btn-primary text-white px-3 py-1" style="font-weight: lighter;">Lihat lainnya</a>
           </div>
         </div>
         <div class="col-md-12">

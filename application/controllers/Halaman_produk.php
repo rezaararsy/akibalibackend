@@ -41,4 +41,9 @@ class Halaman_produk extends CI_Controller {
 		$data['hasil'] = $this->m_data->getDataDetil($id);
 		$this->load->view('detail-produk',$data);
 	}
+	public function kategori(){
+		$id = $this->uri->segment(3);
+		$data['hasil'] = $this->m_data->getDataDetil($id);
+		$this->load->view('kategori',$data);
+	}
 }
