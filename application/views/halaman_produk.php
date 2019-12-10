@@ -54,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="col-6 text-right topnav" id="myTopNav">
             <ul class="menu text-right">
               <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-4"
-                  href="<?php echo base_url(). 'index.php/Welcome'; ?>">Beranda</a></li>
+                  href="<?php echo base_url(). ''; ?>">Beranda</a></li>
               <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black current py-3 px-3"
                   href="<?php echo base_url(). 'index.php/halaman_produk'; ?>">Produk</a></li>
               <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-3"

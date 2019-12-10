@@ -42,8 +42,14 @@ class Halaman_produk extends CI_Controller {
 		$this->load->view('detail-produk',$data);
 	}
 	public function kategori(){
-		$id = $this->uri->segment(3);
-		$data['hasil'] = $this->m_data->getDataDetil($id);
+		$data['merek_mobil'] = $this->m_data->getMerekMobil();
+		$data['merek_motor'] = $this->m_data->getMerekMotor();
+		$data['merek_truck'] = $this->m_data->getMerekTruck();
+		$data['merek_aksesoris'] = $this->m_data->getMerekAksesoris();
 		$this->load->view('kategori',$data);
 	}
+	public function data_json_produk(){
+		header('Content-Type: application/json');
+    	echo $this->m_data->getDataProduk();
+    }
 }

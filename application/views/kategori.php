@@ -51,14 +51,26 @@
                 <a href="index.html" class="font-weight-bold">AKI 24 Jam Bali</a>
               </div>
             </div>
-            <div class="col-6 text-right topnav" id="myTopNav">
+            <!-- <div class="col-6 text-right topnav" id="myTopNav">
               <ul class="menu text-right">
-                <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-4" href="index.html">Beranda</a></li>
+                <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-4" href="">Beranda</a></li>
                 <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black current py-3 px-3" href="produk.html">Produk</a></li>
                 <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-3" href="galeri.html">Galeri</a></li>
                 <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-3" href="kontak.html">Kontak</a></li>
               </ul>
-            </div>
+            </div> -->
+            <div class="col-6 text-right topnav" id="myTopNav">
+            <ul class="menu text-right">
+              <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-4"
+                  href="<?php echo base_url(). ''; ?>">Beranda</a></li>
+              <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black current py-3 px-3"
+                  href="<?php echo base_url(). 'index.php/halaman_produk'; ?>">Produk</a></li>
+              <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-3"
+                  href="<?php echo base_url(). 'index.php/halaman_galeri'; ?>">Galeri</a></li>
+              <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-3"
+                  href="<?php echo base_url(). 'index.php/kontak'; ?>">Kontak</a></li>
+            </ul>
+          </div>
 
             <div class="col-1 text-left topbar black">
               <span class="d-inline-block d-lg-block"><a href="#" class="text-white site-menu-toggle js-menu-toggle py-5 text-black"><span class="icon-menu h3 text-black"></span></a></span>
@@ -92,13 +104,20 @@
           <div class="category-card" style="min-width: min-content; padding: 20px; background-color: #fff;  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); min-height: 200px;">
             <h4><strong>Kategori</strong></h4>  
             <ul uk-accordion>
-              <li class="uk-open">
+              <!-- <li class="uk-open"> -->
+                  <li>
                   <a class="uk-accordion-title" style="color: #01d28e;" href="#">Mobil</a>
                   <div class="uk-accordion-content">
                     <ul style="list-style: none;">
-                      <li><a>Yuasa</a></li>
+                      <!-- <li><a>Yuasa</a></li>
                       <li><a>Gefoce</a></li>
-                      <li><a>Incoe</a></li>
+                      <li><a>Incoe</a></li> -->
+                      <?php
+                                foreach($merek_mobil as $d)
+                                {                               
+                                    echo "<li><a>$d->nama</a></li>";                
+                                }
+                            ?>
                     </ul>
                   </div>
               </li>
@@ -106,9 +125,15 @@
                   <a class="uk-accordion-title" style="color: #ef3e36;" href="#">Motor</a>
                   <div class="uk-accordion-content">
                     <ul style="list-style: none;">
-                      <li><a>Yuasa</a></li>
+                      <!-- <li><a>Yuasa</a></li>
                       <li><a>Gefoce</a></li>
-                      <li><a<>Incoe</a></li>
+                      <li><a<>Incoe</a></li> -->
+                      <?php
+                                foreach($merek_motor as $d)
+                                {                               
+                                    echo "<li><a>$d->nama</a></li>";                
+                                }
+                            ?>
                     </ul>
                   </div>
               </li>
@@ -116,9 +141,15 @@
                   <a class="uk-accordion-title" style="color: #2e282a;" href="#">Truk</a>
                   <div class="uk-accordion-content">
                     <ul style="list-style: none;">
-                      <li><a>Yuasa</a></li>
+                      <!-- <li><a>Yuasa</a></li>
                       <li><a>Gefoce</a></li>
-                      <li><a<>Incoe</a></li>
+                      <li><a<>Incoe</a></li> -->
+                      <?php
+                                foreach($merek_truck as $d)
+                                {                               
+                                    echo "<li><a>$d->nama</a></li>";                
+                                }
+                            ?>
                     </ul>
                   </div>
               </li>
@@ -126,9 +157,15 @@
                   <a class="uk-accordion-title" style="color: #ffc43d;" href="#">Aksesoris</a>
                   <div class="uk-accordion-content">
                     <ul style="list-style: none;">
-                      <li><a>Yuasa</a></li>
+                      <!-- <li><a>Yuasa</a></li>
                       <li><a>Gefoce</a></li>
-                      <li><a<>Incoe</a></li>
+                      <li><a<>Incoe</a></li> -->
+                      <?php
+                                foreach($merek_aksesoris as $d)
+                                {                               
+                                    echo "<li><a>$d->nama</a></li>";                
+                                }
+                            ?>
                     </ul>
                   </div>
               </li>
