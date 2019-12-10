@@ -119,7 +119,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4">
               <div class="uk-card">
-                <a href="<?php echo base_url(); ?>index.php/detail_produk/<?php echo $d->id; ?>">
+                <a href="<?php echo base_url(); ?>index.php/halaman_produk/detail/<?php echo $d->id; ?>">
                   <img src="<?php echo base_url();?><?php echo $d->gambar; ?>" alt="Image" class="img-card">
                   <div class="card-container">
                     <div class="card-title "><?php echo $d->nama; ?> </div>
@@ -160,7 +160,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4">
               <div class="uk-card">
-                <a href="<?php echo base_url(); ?>index.php/detail_produk/<?php echo $d->id; ?>">
+                <a href="<?php echo base_url(); ?>index.php/halaman_produk/detail/<?php echo $d->id; ?>">
                   <img src="<?php echo base_url();?><?php echo $d->gambar; ?>" alt="Image" class="img-card">
                   <div class="card-container">
                     <div class="card-title "><?php echo $d->nama; ?> </div>
@@ -201,7 +201,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4">
               <div class="uk-card">
-                <a href="<?php echo base_url(); ?>index.php/detail_produk/<?php echo $d->id; ?>">
+                <a href="<?php echo base_url(); ?>index.php/halaman_produk/detail/<?php echo $d->id; ?>">
                   <img src="<?php echo base_url();?><?php echo $d->gambar; ?>" alt="Image" class="img-card">
                   <div class="card-container">
                     <div class="card-title "><?php echo $d->nama; ?> </div>
@@ -242,7 +242,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4">
               <div class="uk-card">
-                <a href="<?php echo base_url(); ?>index.php/detail_produk/<?php echo $d->id; ?>">
+                <a href="<?php echo base_url(); ?>index.php/halaman_produk/detail/<?php echo $d->id; ?>">
                   <img src="<?php echo base_url();?><?php echo $d->gambar; ?>" alt="Image" class="img-card">
                   <div class="card-container">
                     <div class="card-title "><?php echo $d->nama; ?> </div>

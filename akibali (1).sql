@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 19 Nov 2019 pada 17.13
+-- Waktu pembuatan: 10 Des 2019 pada 15.57
 -- Versi server: 10.1.34-MariaDB
 -- Versi PHP: 5.6.37
 
@@ -82,11 +82,11 @@ INSERT INTO `merek` (`id_merek`, `nama`, `kategori`) VALUES
 (10, 'GA', 2),
 (12, 'Yuasa', 1),
 (13, 'Xtra', 1),
-(16, 'NS', 2),
 (17, 'GS', 1),
 (18, 'Aspira', 1),
 (19, 'Fleet', 2),
-(20, 'Power zone', 2);
+(20, 'Power zone', 2),
+(21, 'YUSA', 3);
 
 -- --------------------------------------------------------
 
@@ -111,7 +111,9 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id`, `nama`, `keterangan`, `gambar`, `harga`, `jumlah`, `kategori`, `merk`, `tgl`) VALUES
-(1, 'WWW', '<p>WWW</p>', '/asset/img/pWWWp.png', 2222, 0, 2, 10, '2019-11-19 16:08:39');
+(1, 'WWW', '<p>WWW</p>', '/asset/img/pWWWp.png', 2222, 0, 2, 10, '2019-11-19 16:08:39'),
+(2, 'TES', '<p>TES</p>', '/asset/img/pTESp.png', 1111, 0, 1, 10, '2019-12-10 14:52:38'),
+(3, 'QWWER', '<p>qwqwqw</p>', '/asset/img/pqwqwqwp.jpg', 3232, 0, 3, 10, '2019-12-10 14:52:48');
 
 -- --------------------------------------------------------
 
@@ -176,7 +178,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `galeri`
 --
 ALTER TABLE `galeri`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `kategori`
@@ -194,7 +196,7 @@ ALTER TABLE `merek`
 -- AUTO_INCREMENT untuk tabel `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`

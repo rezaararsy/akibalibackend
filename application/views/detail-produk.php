@@ -86,7 +86,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="<?php echo base_url(). 'index.php/Welcome'; ?>">Beranda</a></li>
                     <li class="breadcrumb-item"><a href="<?php echo base_url(). 'index.php/halaman_produk'; ?>">Produk</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">NS 40 ZL</li>
+                    <li class="breadcrumb-item active" aria-current="page"><?php echo $d->nama;?></li>
                   </ol>
                 </nav>
           </div>
@@ -101,24 +101,51 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <div class="card-title"><?php echo $d->nama;?></div>
               <div class="card-merk"><?php echo $d->merek;?></div>
               <div class="d-flex">
-                <span class="icon-circle icon-green"></span>
-                <span class="card-tag">Mobil</span>
+                <!-- <span class="icon-circle icon-green"></span> -->
+                <!-- <span class="card-tag" ><?php echo $d->kategori;?></span> -->
+
+                <!-- Iconnya -->
+                <span class="icon-circle <?php  
+                $t=$d->kategori;
+                if($t==1){
+                  echo "icon-green"; //diganti class yang kalian bikin
+                }elseif($t==2){
+                  echo "icon-green";
+                }elseif($t==3){
+                  echo "icon-green";
+                }elseif($t==4){
+                  echo "icon-green";
+                }?>"></span>
+
+                <span class="card-tag">
+                <?php  
+                $t=$d->kategori;
+                if($t==1){
+                  echo "Motor";
+                }elseif($t==2){
+                  echo "Mobil";
+                }elseif($t==3){
+                  echo "Truk";
+                }elseif($t==4){
+                  echo "Aksesoris";
+                }?>
+
+                </span>
               </div>
               <div class="card-isi"><?php echo $d->keterangan;?></div>
               <div class="card-price"><strong>Rp. <?php echo $d->harga;?></strong></div>    
             </div>
           </div> 
         </div>
+        <script>
+        </script>
     </div>
-    <?php 
-				                    
-        }
-		 ?>
+    
     <div class="container" >
       <h4>Produk serupa</h4>        
       <div class="col-md-12">
         <div class="row">
-          <div class="col-lg-3 col-md-3 mb-4">
+          <!-- <div class="col-lg-3 col-md-3 mb-4">
             <div class="uk-card">
               <a href="<?php echo base_url(). 'index.php/detail_produk'; ?>">
               <img src="<?php echo base_url();?>asset2/images/vs.jpg" alt="Image" class="img-card"> 
@@ -132,44 +159,55 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
             </a>
             </div>
-          </div>
-
+          </div> -->
+          <?php
+           $merk = $d->merek1; 
+           $this->load->model('m_data');
+           $datamerek = $this->m_data->getMerek($merk);
+           $i = 0;
+           foreach($datamerek as $b)
+            { 	       
+          ?>
+          
           <div class="col-lg-3 col-md-3 mb-4">
             <div class="uk-card">
-              <a href="<?php echo base_url(). 'index.php/detail_produk'; ?>">
-              <img src="<?php echo base_url();?>asset2/images/vs.jpg" alt="Image" class="img-card"> 
+              <a href="<?php echo base_url(); ?>index.php/halaman_produk/detail/<?php echo $b->id; ?>">
+              <img src="<?php echo base_url();?><?php echo $b->gambar; ?>" alt="Image" class="img-card"> 
               <div class="card-container">
-                <div class="card-title ">NS 40 ZL </div> 
+                <div class="card-title "><?php echo $b->nama;?> </div> 
                 <div class="d-flex">
-                    <span class="col-md-6 text-left card-merk">Yuasa</span>
-                    <span class="col-md-6 text-center card-tag">Mobil</span>
+                    <span class="col-md-6 text-left card-merk"><?php echo $b->merek;?></span>
+                    <span class="col-md-6 text-center card-tag"><?php  
+                    $t=$b->kategori;
+                    if($t==1){
+                      echo "Motor";
+                    }elseif($t==2){
+                      echo "Mobil";
+                    }elseif($t==3){
+                      echo "Truk";
+                    }elseif($t==4){
+                      echo "Aksesoris";
+                    }?></span>
                   </div> 
-                <div class="card-price">Rp. 100.000</div>
+                <div class="card-price"><?php echo $b->harga;?></div>
               </div>
             </a>
             </div>
           </div>
+			
+				<?php 
+				if (++$i == 3) break; 
+    }   
+    ?>
+
+          
+
+         
 
           <div class="col-lg-3 col-md-3 mb-4">
-            <div class="uk-card">
-              <a href="<?php echo base_url(). 'index.php/detail_produk'; ?>">
-              <img src="<?php echo base_url();?>asset2/images/vs.jpg" alt="Image" class="img-card"> 
-              <div class="card-container">
-                <div class="card-title ">NS 40 ZL </div> 
-                <div class="d-flex">
-                    <span class="col-md-6 text-left card-merk">Yuasa</span>
-                    <span class="col-md-6 text-center card-tag">Mobil</span>
-                  </div> 
-                <div class="card-price">Rp. 100.000</div>
-              </div>
-            </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-3 mb-4">
-              <a href="#">
+              <a href="<?php echo base_url(); ?>index.php/halaman_produk/kategori">
                 <img src="<?php echo base_url();?>asset2/images/arrow.png" alt="Image" class="img-card-next" style="background-position: center;"> 
-                <h5 style="margin-left: 35px; margin-top: 10px;">selanjutnya</h5>
+                <h5 style="margin-left: 35px; margin-top: 10px;">Lainnya</h5>
               </a>
           </div>
         </div> 
@@ -177,7 +215,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
   </div>
     <!-- END .site-section -->
-    
+    <?php 
+				                    
+        }
+		 ?>
 
     <footer class="site-footer">
         <div class="row align-items-center justify-content-center text-center">

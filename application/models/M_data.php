@@ -83,41 +83,41 @@ function get_sub_category($category_id){
         return $hasil->result();
   }
   function getMerek($id){
-    $hasil=$this->db->query("SELECT * FROM produk WHERE merk='$id'");
+    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.merk='$id'");
         return $hasil->result();
   }
 
 
   function getDaftarMobil(){
-    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.kategori=2 ORDER BY id DESC");
+    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.kategori=2 ORDER BY id DESC");
         return $hasil->result();
   }
   function getDaftarMobile($id){
-    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.kategori=2 AND merk='$id'");
+    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.kategori=2 AND merk='$id'");
         return $hasil->result();
   }
   function getDaftarMotor(){
-    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.kategori=1");
+    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.kategori=1");
         return $hasil->result();
   }
   function getDaftarMotore($id){
-    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.kategori=1 AND merk='$id'");
+    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.kategori=1 AND merk='$id'");
         return $hasil->result();
   }
   function getDaftarTruck(){
-    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.kategori=3");
+    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.kategori=3");
         return $hasil->result();
   }
   function getDaftarTrucke($id){
-    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.kategori=3 AND merk='$id'");
+    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.kategori=3 AND merk='$id'");
         return $hasil->result();
   }
   function getDaftarAksesoris(){
-    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.kategori=4");
+    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.kategori=4");
         return $hasil->result();
   }
   function getDaftarAksesorise($id){
-    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.kategori=4 AND merk='$id'");
+    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.kategori=4 AND merk='$id'");
         return $hasil->result();
   }
   function getDaftarGambar(){
@@ -153,7 +153,7 @@ function get_sub_category($category_id){
         return $hasil->result();
   }
   function getDataDetil($id){
-    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE id='$id'");
+    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE id='$id'");
         return $hasil->result();
   }
   function getMerekMotor(){
