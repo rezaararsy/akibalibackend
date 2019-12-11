@@ -97,6 +97,7 @@
                 background-color: #fff;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
                 min-height: 200px;
+
             }
         </style>
         <!-- Tabel Kategori-->
@@ -104,8 +105,7 @@
             <div class="row col-md-12">
                 <div class="site-section col-md-4">
                     <div class="container mb-4">
-                        <div class="category-card"
-                            style="min-width: min-content; padding: 20px; background-color: #fff;  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); min-height: 200px;">
+                        <div class="category-card">
                             <h4 onclick="showData(0,0)"><strong>Kategori</strong></h4>
                             <ul uk-accordion>
                                 <!-- <li class="uk-open"> -->
@@ -290,7 +290,7 @@
                             else if (value.kategori == 4) {
                                 jenis = "Aksesoris";
                             }
-                            $("#kontenya").append('<div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4"><div class="uk-card"><a href="<?php echo base_url(); ?>index.php/halaman_produk/detail/' + value.id + '"><img src="<?php echo base_url();?>' + value.gambar + '" alt="Image"class="img-card"><div class="card-container"><div class="card-title ">' + value.nama + '</div><div class="d-flex"><span class="col-md-6 text-left card-merk">' + value.merek + '</span><span class="col-md-6 text-center card-tag">' + jenis + '</span></div><div class="card-price">Rp. ' + value.harga + '</div></div></a></div></div>');
+                            $("#kontenya").append('<div class="col-lg-6 col-md-6 col-sm-6 col-12 mb-4"><div class="uk-card"><a href="<?php echo base_url(); ?>index.php/halaman_produk/detail/' + value.id + '"><img src="<?php echo base_url();?>' + value.gambar + '" alt="Image"class="img-card"><div class="card-container"><div class="card-title ">' + value.nama + '</div><div class=" text-left card-merk mb-4">' + value.merek + '</div><div class=" text-center card-tag">' + jenis + '</div><div class="card-price">Rp. ' + value.harga + '</div></div></a></div></div>');
                         });
                     }
                 });

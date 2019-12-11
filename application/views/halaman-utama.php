@@ -205,7 +205,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- END .site-section -->
 
     <footer class="site-footer">
-        <div class="row mt-5 align-items-center justify-content-center text-center">
+        <div class="row align-items-center justify-content-center text-center">
           <div class="col-md-12">
             <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->

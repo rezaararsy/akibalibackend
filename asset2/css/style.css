@@ -298,10 +298,19 @@ h1, h2, h3, h4, h5,
 
 .site-footer {
   padding:  0;
-  background: #efefef; }
+  background: #efefef;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%; }
   @media (min-width: 768px) {
     .site-footer {
-      padding:  0; } }
+      padding:  0;
+      background: #efefef;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%; } }
   .site-footer .border-top {
     border-top: 1px solid rgba(255, 255, 255, 0.1) !important; }
   .site-footer p {
@@ -1959,6 +1968,7 @@ h1, h2, h3, h4, h5,
   font-weight: bold;
   margin-left: 0; 
   padding-left: 0;
+  min-width: min-content;
 }
 .card-isi {
   font-size: 20px;
@@ -2034,7 +2044,7 @@ h1, h2, h3, h4, h5,
     display: block;
   }
   .martop{
-    margin-top: 120px;
+    margin-top: 140px;
   }
 }
 
