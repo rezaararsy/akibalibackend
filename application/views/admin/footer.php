@@ -66,8 +66,14 @@
 
     $('#table_galeri').on('click', '.hapus_record', function () {
         var kode = $(this).data('kode');
+        var filenya = $(this).data('filenya');
         $('#ModalHapus').modal('show');
         $('[name="id"]').val(kode);
+        $('[name="filenya"]').val(filenya);
+
+        // var kode = $(this).data('kode');
+        // $('#ModalHapus').modal('show');
+        // $('[name="id"]').val(kode);
     });
 
 </script>
@@ -161,8 +167,10 @@
 
     $('#table_produk').on('click', '.hapus_record', function () {
         var kode = $(this).data('kode');
+        var filenya = $(this).data('filenya');
         $('#ModalHapus').modal('show');
         $('[name="id"]').val(kode);
+        $('[name="filenya"]').val(filenya);
     });
 
     $('#table_produk').on('click', '.edit_record', function () {

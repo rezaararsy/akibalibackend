@@ -25,10 +25,12 @@ class Galeri extends CI_Controller {
 		header('Content-Type: application/json');
     	echo $this->m_data->getDataGaleri();
     }   
-    function deleteGaleri(){ 
-		$kode=$this->input->post('id');
+    function deleteGaleri(){   
+    $kode=$this->input->post('id');
+    $filenya='.'.$this->input->post('filenya');
 		$this->db->where('id',$kode);
-		$this->db->delete('galeri');
+    $this->db->delete('galeri');
+    unlink($filenya); 
 		redirect('/galeri');
 	  }
       public function inputDataGaleri()

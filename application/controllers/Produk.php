@@ -37,9 +37,11 @@ class Produk extends CI_Controller {
     }
     function delete(){ 
         $kode=$this->input->post('id');
+        $filenya='.'.$this->input->post('filenya');
         $this->db->where('id',$kode);
         $this->db->delete('produk');
-        redirect('/produk');
+        unlink($filenya); 
+        redirect('/produk');     
           }
           function update(){ 
         $kode=$this->input->post('id');

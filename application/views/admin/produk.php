@@ -68,6 +68,7 @@
                             aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
+                    <input type="hidden" name="filenya" class="form-control" placeholder="Kode Barang" required>
                     <input type="hidden" name="id" class="form-control" placeholder="Kode Barang" required>
                     <strong>Anda yakin mau menghapus produk ini?</strong>
                 </div>
