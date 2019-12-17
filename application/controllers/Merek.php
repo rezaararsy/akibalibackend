@@ -46,8 +46,7 @@ class Merek extends CI_Controller {
           public function inputDataMerek()
           {	
               $data = array(
-              'nama' => $this->input->post('nama'),
-              'kategori' => $this->input->post('kategori'),
+              'nama' => $this->input->post('nama')
               );
               $this->m_data->input_data($data,'merek');
               redirect('/merek');

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Des 2019 pada 05.40
+-- Waktu pembuatan: 17 Des 2019 pada 14.49
 -- Versi server: 10.1.34-MariaDB
 -- Versi PHP: 5.6.37
 
@@ -44,49 +44,27 @@ INSERT INTO `galeri` (`id`, `nama`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kategori`
---
-
-CREATE TABLE `kategori` (
-  `id_kategori` int(11) NOT NULL,
-  `nama` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `kategori`
---
-
-INSERT INTO `kategori` (`id_kategori`, `nama`) VALUES
-(1, 'Motor'),
-(2, 'Mobil'),
-(3, 'Truck'),
-(4, 'Aksesoris');
-
--- --------------------------------------------------------
-
---
 -- Struktur dari tabel `merek`
 --
 
 CREATE TABLE `merek` (
   `id_merek` int(11) NOT NULL,
-  `nama` varchar(100) NOT NULL,
-  `kategori` int(11) NOT NULL
+  `nama` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `merek`
 --
 
-INSERT INTO `merek` (`id_merek`, `nama`, `kategori`) VALUES
-(10, 'GA', 2),
-(12, 'Yuasa', 1),
-(13, 'Xtra', 1),
-(17, 'GS', 1),
-(18, 'Aspira', 1),
-(19, 'Fleet', 2),
-(20, 'Power zone', 2),
-(21, 'YUSA', 3);
+INSERT INTO `merek` (`id_merek`, `nama`) VALUES
+(10, 'GA'),
+(12, 'Yuasa'),
+(13, 'Xtra'),
+(17, 'GS'),
+(18, 'Aspira'),
+(19, 'Fleet'),
+(20, 'Power zone'),
+(21, 'YUSA');
 
 -- --------------------------------------------------------
 
@@ -100,11 +78,17 @@ CREATE TABLE `produk` (
   `keterangan` varchar(10000) NOT NULL,
   `gambar` varchar(1000) NOT NULL,
   `harga` int(11) NOT NULL,
-  `jumlah` int(11) NOT NULL,
-  `kategori` int(11) NOT NULL,
   `merk` int(11) NOT NULL,
   `tgl` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `produk`
+--
+
+INSERT INTO `produk` (`id`, `nama`, `keterangan`, `gambar`, `harga`, `merk`, `tgl`) VALUES
+(6, 'tes', '<p>wqwq</p>', '/asset/img/pwqwqp.jpg', 111, 12, '2019-12-11 05:00:15'),
+(8, 'SS', '<p>qwqw</p>', '/asset/img/pqwqwp.png', 1212, 19, '2019-12-17 13:48:56');
 
 -- --------------------------------------------------------
 
@@ -138,12 +122,6 @@ ALTER TABLE `galeri`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `kategori`
---
-ALTER TABLE `kategori`
-  ADD PRIMARY KEY (`id_kategori`);
-
---
 -- Indeks untuk tabel `merek`
 --
 ALTER TABLE `merek`
@@ -172,12 +150,6 @@ ALTER TABLE `galeri`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `kategori`
---
-ALTER TABLE `kategori`
-  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
 -- AUTO_INCREMENT untuk tabel `merek`
 --
 ALTER TABLE `merek`
@@ -187,7 +159,7 @@ ALTER TABLE `merek`
 -- AUTO_INCREMENT untuk tabel `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`

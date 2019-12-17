@@ -90,20 +90,6 @@
             columns: [
                 { "data": "id_merek" },
                 { "data": "nama" },
-                {
-                    "data": null,
-                    render: function (data, type, row, meta) {
-                        if (row['kategori'] == 1) {
-                            return 'Motor'
-                        } else if (row['kategori'] == 2) {
-                            return 'Mobil'
-                        } else if (row['kategori'] == 3) {
-                            return 'Truck'
-                        } else if (row['kategori'] == 4) {
-                            return 'Aksesoris'
-                        }
-                    }
-                },
                 { "data": "view" }
             ]
         });
@@ -187,7 +173,7 @@
         $('[name="keterangan"]').val(keterangan);
     });
 </script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     $(document).ready(function () {
         $('#category').change(function () {
             var id = $(this).val();
@@ -213,7 +199,7 @@
         });
 
     });
-</script>
+</script> -->
 </body>
 
 </html>

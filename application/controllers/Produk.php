@@ -20,9 +20,9 @@ class Produk extends CI_Controller {
     public function add()
 	{	
         $this->load->view('admin/header');
-        $data['category'] = $this->m_data->get_category()->result();
-		$this->load->view('admin/add_produk',$data);
-		$this->load->view('admin/footer');
+        $data['merek'] = $this->m_data->get_merek();
+		    $this->load->view('admin/add_produk',$data);
+		    $this->load->view('admin/footer');
     }
     function get_sub_category(){
         $category_id = $this->input->post('id');
@@ -82,7 +82,7 @@ class Produk extends CI_Controller {
               'keterangan' => $this->input->post('keterangan'),
               'gambar' => $linke,
               'harga' => $this->input->post('harga'),
-              'kategori' => $this->input->post('kategori'),
+              // 'kategori' => $this->input->post('kategori'),
               'merk' => $this->input->post('merek')
               );
               $this->m_data->input_data($data,'produk');

@@ -34,7 +34,7 @@
                                 <label for="fname">Masukkan Nama Merek</label>
                                 <input class="form-control data" type="text" id="fname" name="nama" placeholder="">
 
-                                <label for="usia" style="margin-top:10px">Kategori</label>
+                                <!-- <label for="usia" style="margin-top:10px">Kategori</label>
                                 <select style="margin-bottom: 10px;" class="data form-control" name="kategori"
                                     id="klinik">
                                     <option value="" hidden>-- Please Select -- </option>
@@ -42,10 +42,10 @@
                                     <option value="2">Mobil</option>
                                     <option value="3">Truck</option>
                                     <option value="4">Aksesoris</option>
-                                </select>
+                                </select> -->
 
                                 <button type="sumbit" class="btn btn-warning" style="margin-top: 10px;">Tambah
-                                    Data</button>
+                                    Merek</button>
                             </form>
                         </div>
                     </div>

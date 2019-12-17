@@ -66,9 +66,9 @@ function get_sub_category($category_id){
     return $this->datatables->generate();
   }
   function getDataMerek(){
-    $this->datatables->select('id_merek,nama,kategori');
+    $this->datatables->select('id_merek,nama');
     $this->datatables->from('merek');
-    $this->datatables->add_column('view', '<a href="javascript:void(0);" class="edit_record btn btn-success" data-kode="$1" data-nama="$2">Edit<i class="fa fa-fw fa-edit"></i></a>  <a href="javascript:void(0);" class="hapus_record btn btn-danger" data-kode="$1">Hapus<i class="fa fa-fw fa-trash"></i></a>','id_merek,nama,kategori');
+    $this->datatables->add_column('view', '<a href="javascript:void(0);" class="edit_record btn btn-success" data-kode="$1" data-nama="$2">Edit<i class="fa fa-fw fa-edit"></i></a>  <a href="javascript:void(0);" class="hapus_record btn btn-danger" data-kode="$1">Hapus<i class="fa fa-fw fa-trash"></i></a>','id_merek,nama');
     return $this->datatables->generate();
   }
   function getDataGaleri(){
@@ -84,6 +84,11 @@ function get_sub_category($category_id){
   }
   function getMerek($id){
     $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.merk='$id'");
+        return $hasil->result();
+  }
+
+  function get_merek(){
+    $hasil=$this->db->query("SELECT * FROM merek");
         return $hasil->result();
   }
 

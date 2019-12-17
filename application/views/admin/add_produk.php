@@ -44,7 +44,7 @@
 
                                 <br>
 
-                                <label for="usia" style="margin-top:10px">Kategori : </label>
+                                <!-- <label for="usia" style="margin-top:10px">Kategori : </label> -->
                                 <!-- <select style="margin-bottom: 10px;" class="data form-control" name="kategori"
                                     id="klinik">
                                     <option value="" hidden>-- Please Select -- </option>
@@ -53,19 +53,22 @@
                                     <option value="3">Truck</option>
                                     <option value="4">Aksesoris</option>
                                 </select> -->
-                                <select class="form-control" name="kategori" id="category" required>
+                                <!-- <select class="form-control" name="kategori" id="category" required>
                                     <option value="">Pilih</option>
                                     <?php foreach($category as $row):?>
                                     <option value="<?php echo $row->id_kategori;?>"><?php echo $row->nama;?>
                                     </option>
                                     <?php endforeach;?>
-                                </select>
+                                </select> -->
 
                                 <div class="form-group">
                                     <label>Merek</label>
                                     <select class="form-control" id="sub_category" name="merek" required>
-                                        <option>No Selected</option>
-
+                                        <option value="">Pilih</option>
+                                        <?php foreach($merek as $row):?>
+                                        <option value="<?php echo $row->id_merek;?>"><?php echo $row->nama;?>
+                                        </option>
+                                        <?php endforeach;?>
                                     </select>
                                 </div>
 

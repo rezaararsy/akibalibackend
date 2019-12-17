@@ -39,7 +39,6 @@
                                     <tr>
                                         <th>Kode Merek</th>
                                         <th>Nama Produk</th>
-                                        <th>Kategori</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>

@@ -42,7 +42,7 @@
                     <div class="small-box bg-danger">
                         <div class="inner">
                             <h4>Menu Merek</h4>
-                        </div><a href="stock_bahan_baku.html" class="small-box-footer">More info <i
+                        </div><a href="<?php echo base_url(); ?>index.php/merek" class="small-box-footer">More info <i
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
