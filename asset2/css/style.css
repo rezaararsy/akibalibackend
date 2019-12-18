@@ -298,10 +298,19 @@ h1, h2, h3, h4, h5,
 
 .site-footer {
   padding:  0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   background: #efefef; }
   @media (min-width: 768px) {
     .site-footer {
-      padding:  0; } }
+      padding:  0;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%; 
+      background: #efefef; } }
   .site-footer .border-top {
     border-top: 1px solid rgba(255, 255, 255, 0.1) !important; }
   .site-footer p {
@@ -2038,7 +2047,7 @@ h1, h2, h3, h4, h5,
     display: block;
   }
   .martop{
-    margin-top: 120px;
+    margin-top: 140px;
   }
 }
 
@@ -2095,4 +2104,20 @@ padding-bottom: 0;
 }
 .icon-green{
   color: #01d28e;
+}
+
+.daftar-merek {
+  list-style: none;
+}
+
+.daftar-merek li a {
+  color: black;
+}
+
+.category-card {
+  min-width: min-content;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  min-height: 200px;
 }

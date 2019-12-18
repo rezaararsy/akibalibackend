@@ -24,6 +24,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="<?php echo base_url();?>asset2/css/style.css">
 
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css" />
+
   </head>
 
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -84,7 +87,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="row">
               <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo base_url(). 'index.php/Welcome'; ?>">Beranda</a></li>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url(). 'index.php/Welcome'; ?>" style="color: #01d28e">Beranda</a></li>
                     <li class="breadcrumb-item"><a href="<?php echo base_url(). 'index.php/halaman_produk'; ?>">Produk</a></li>
                     <li class="breadcrumb-item active" aria-current="page"><?php echo $d->nama;?></li>
                   </ol>
@@ -99,16 +102,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="col-lg-6 col-md-6 mb-5">
             <div class="card-info">
               <div class="card-title"><?php echo $d->nama;?></div>
-              <div class="card-merk"><span class="icon-circle"></span><?php echo $d->merek;?></div>
-              <div class="d-flex">
+              <div class="card-merk"><span class="icon-circle icon-green"></span><?php echo $d->merek;?></div>
+              <!-- <div class="d-flex"> -->
                 <!-- <span class="icon-circle icon-green"></span> -->
-                <!-- <span class="card-tag" ><?php echo $d->merek;?></span> -->
+                <!-- <span class="card-tag" ></span> -->
 
                 <!-- Iconnya -->
               
 
                 
-              </div>
+              <!-- </div> -->
               <div class="card-isi"><?php echo $d->keterangan;?></div>
               <div class="card-price"><strong>Rp. <?php echo $d->harga;?></strong></div>    
             </div>
@@ -215,6 +218,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="<?php echo base_url();?>asset2/js/aos.js"></script>
 
     <script src="<?php echo base_url();?>asset2/js/main.js"></script>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
 
   </body>
 

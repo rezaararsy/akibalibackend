@@ -82,15 +82,6 @@
             </div>
         </header>
 
-        <style>
-            .category-card {
-                min-width: min-content;
-                padding: 20px;
-                background-color: #fff;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-                min-height: 200px;
-            }
-        </style>
         <!-- Tabel Kategori-->
         <div class="container martop">
             <div class="row col-md-12">
@@ -98,16 +89,13 @@
                     <div class="container mb-4">
                         <div class="category-card"
                             style="min-width: min-content; padding: 20px; background-color: #fff;  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); min-height: 200px;">
-                            <h4><strong>Merek</strong></h4>
-                            <style>
-                                .daftar-merek {
-                                    list-style: none;
-                                }
-
-                                .daftar-merek li a {
-                                    color: black;
-                                }
-                            </style>
+                            <div class="uk-margin">
+                                <form class="uk-search uk-search-default">
+                                    <span uk-search-icon></span>
+                                    <input class="uk-search-input" type="search" placeholder="Cari...">
+                                </form>
+                                </div>
+                            <h4 style="margin-top: 0"><strong>Merek</strong></h4>
                             <ul class="daftar-merek">
                                 <li>
                                     <a a onclick="showData(0)" style="color: coral;">Semua</a>
