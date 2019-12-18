@@ -83,7 +83,7 @@ function get_sub_category($category_id){
         return $hasil->result();
   }
   function getMerek($id){
-    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.merk='$id'");
+    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.merk='$id'");
         return $hasil->result();
   }
 
@@ -158,7 +158,7 @@ function get_sub_category($category_id){
         return $hasil->result();
   }
   function getDataDetil($id){
-    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE id='$id'");
+    $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE id='$id'");
         return $hasil->result();
   }
   function getMerekMotor(){

@@ -298,19 +298,10 @@ h1, h2, h3, h4, h5,
 
 .site-footer {
   padding:  0;
-  background: #efefef;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%; }
+  background: #efefef; }
   @media (min-width: 768px) {
     .site-footer {
-      padding:  0;
-      background: #efefef;
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100%; } }
+      padding:  0; } }
   .site-footer .border-top {
     border-top: 1px solid rgba(255, 255, 255, 0.1) !important; }
   .site-footer p {
@@ -1604,7 +1595,7 @@ h1, h2, h3, h4, h5,
     background-position: 50% 50%;
     background-repeat:   no-repeat;
     background-size:     cover;
-}
+}s
 
 .img-years {
   position: relative;
@@ -2002,6 +1993,9 @@ h1, h2, h3, h4, h5,
 .uk-padding-small {
   padding: 15px;
 }
+.uk-accordion-title::after{
+  color: crimson;
+}
 
 
 .menu {
@@ -2044,7 +2038,7 @@ h1, h2, h3, h4, h5,
     display: block;
   }
   .martop{
-    margin-top: 140px;
+    margin-top: 120px;
   }
 }
 

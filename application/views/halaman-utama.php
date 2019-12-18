@@ -1,6 +1,3 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
 <!doctype html>
 <html lang="en">
 
@@ -12,6 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href="https://fonts.googleapis.com/css?family=Muli:400,700" rel="stylesheet">
 
     <link rel="stylesheet" href="<?php echo base_url();?>asset2/fonts/icomoon/style.css">
+
     <link rel="stylesheet" href="<?php echo base_url();?>asset2/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>asset2/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="<?php echo base_url();?>asset2/css/jquery.fancybox.min.css">
@@ -29,6 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     }
 
     </style>
+
   </head>
 
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -52,13 +51,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div class="col-5">
               <div class="site-logo">
-                <a href="<?php echo base_url(). 'index.php/Welcome'; ?>" class="font-weight-bold">AKI 24 Jam Bali</a>
+                <a href="<?php echo base_url();?>" class="font-weight-bold">AKI 24 Jam Bali</a>
               </div>
             </div>
 
             <div class="col-6 text-right topnav" id="myTopNav">
-              <ul class="menu text-right">
-                <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-none current py-3 px-4" href="<?php echo base_url(). 'index.php/Welcome'; ?>">Beranda</a></li>
+            <ul class="menu text-right">
+                <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-none current py-3 px-4" href="<?php echo base_url(); ?>">Beranda</a></li>
                 <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-none py-3 px-3" href="<?php echo base_url(). 'index.php/halaman_produk'; ?>">Produk</a></li>
                 <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-none py-3 px-3" href="<?php echo base_url(). 'index.php/halaman_galeri'; ?>">Galeri</a></li>
                 <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-none py-3 px-3" href="<?php echo base_url(). 'index.php/kontak'; ?>">Kontak</a></li>
@@ -69,10 +68,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <span class="d-inline-block d-lg-block"><a href="#" class="text-white site-menu-toggle js-menu-toggle py-5 text-white"><span class="icon-menu h3 text-white"></span></a></span>
               <nav class="site-navigation text-right ml-auto d-none d-lg-none" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                <li class="active"><a href="<?php echo base_url(). 'index.php/Welcome'; ?>" class="nav-link">Beranda</a></li>
-                <li><a href="<?php echo base_url(). 'index.php/halaman_produk'; ?>" class="nav-link">Produk</a></li>
-                <li><a href="<?php echo base_url(). 'index.php/halaman_galeri'; ?>" class="nav-link">Galeri</a></li>
-                <li><a href="<?php echo base_url(). 'index.php/kontak'; ?>" class="nav-link">Kontak</a></li>
+                <li class="active"><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="produk-kategori.html" class="nav-link">Produk</a></li>
+                <li><a href="galeri.html" class="nav-link">Galeri</a></li>
+                <li><a href="kontak.html" class="nav-link">Kontak</a></li>
                 </ul>
               </nav>
             </div>
@@ -90,13 +89,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <p class="animated fadeInDown mb-0">Menjual Aki Original, Bergaransi, dan Harga Bersaing | Pengiriman 24 Jam</p>
               <h6 class="animated fadeInDown mb-4">WhatsApp : 08123813654</h6>
               <p><a href="#layanan" class="animated fadeInDown btn btn-primary btn-outline-white py-3 px-5 mb-5">Layanan Kami</a></p>
-              <div class= "col-md-12" style="margin-top: 100px;">
-                <a class="animated fadeInDown btn" style="color: #fff;">Tersedia :</a>
-                <a href="#"class="animated fadeInDown btn btn-primary btn-outline-white py-1 px-3">Mobil</a>
-                <a href="#"class="animated fadeInDown btn btn-primary btn-outline-white py-1 px-3">Motor</a>
-                <a href="#"class="animated fadeInDown btn btn-primary btn-outline-white py-1 px-3">Truk</a>
-                <a href="#"class="animated fadeInDown btn btn-primary btn-outline-white py-1 px-3">Aksesoris</a>
-              </div>
             </div>
           </div>
         </div>
@@ -162,7 +154,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             <h2 class="h4 mb-4">Tentang Kami</h2>
             <p>Menjual Segala Macam Jenis Aki Untuk Segala Kendaraan. Baik Aki Mobil, Sepeda Motor, Truk, Bus, Kapal, Dan Lainnya. Pemasangan Gratis. Cek Aki Gratis. Menerima Pengiriman Di Wilayah Bali.</p>
-            <p><a href="<?php echo base_url(). 'index.php/halaman_produk'; ?>" class="btn btn-primary text-white px-5">Produk Kami</a></p>
+            <p><a href="produk.html" class="btn btn-primary text-white px-5">Produk Kami</a></p>
           </div>
 
           <div class="col-md-2">
@@ -205,15 +197,51 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- END .site-section -->
 
     <footer class="site-footer">
-        <div class="row align-items-center justify-content-center text-center">
+      <!-- <div class="container"> -->
+        <!-- <div class="row">
+          <div class="col-lg-3">
+            <h2 class="footer-heading mb-3">About Me</h2>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+          </div>
+          <div class="col-lg-8 ml-auto">
+            <div class="row">
+              <div class="col-lg-6 ml-auto">
+                <h2 class="footer-heading mb-4">Quick Links</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Testimonials</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <h2 class="footer-heading mb-4">Connect</h2>
+                <div class="social_29128 white mb-5">
+                  <a href="#"><span class="icon-whatsapp"></span></a>  
+                  <a href="#"><span class="icon-facebook"></span></a>  
+                  <a href="#"><span class="icon-instagram"></span></a>  
+                  <a href="#"><span class="icon-twitter"></span></a>  
+                </div>
+                <h2 class="footer-heading mb-4">Newsletter</h2>
+                <form action="#" class="d-flex" class="subscribe">
+                  <input type="text" class="form-control mr-3" placeholder="Email">
+                  <input type="submit" value="Send" class="btn btn-primary">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div class="row mt-5 align-items-center justify-content-center text-center">
           <div class="col-md-12">
-            <p>
+              <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             Copyright &copy;<script>document.write(new Date().getFullYear());</script> AKI 24 Jam Bali
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>
         </div>
+      <!-- </div> -->
     </footer>
 
     </div>
@@ -238,4 +266,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </body>
 
 </html>
+
+
 

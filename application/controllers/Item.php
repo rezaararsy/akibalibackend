@@ -22,18 +22,25 @@ class Item extends REST_Controller {
 	public function index_get($id = 0)
 	{   
         $id = $this->get('id');
-        $kategori = $this->get('kategori');
-        if(!empty($id) && empty($kategori)){
-            $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.merk='$id' ORDER BY id DESC")->result();
+        // $kategori = $this->get('merek');
+        // if(!empty($id) && empty($kategori)){
+        //     $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.merk='$id' ORDER BY id DESC")->result();
+        //     // $data = $this->db->get_where("produk", ['id' => $id])->result();
+        // }else if(!empty($kategori) && empty($id)){
+        //     $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.kategori='$kategori' ORDER BY id DESC")->result();
+        //     // $data = $this->db->get_where("produk", ['kategori' => $kategori])->row_array();
+        // }else if(!empty($kategori) && !empty($id)){
+        //     // $data = $this->db->get_where("produk", ['id' => $id,'kategori' => $kategori])->row_array();
+        //     $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.merk='$id'AND produk.kategori='$kategori' ORDER BY id DESC")->result();
+        // }else{
+        //     $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek ORDER BY id DESC")->result();
+        //     // $data = $this->db->get("produk")->result();
+        // }
+        if(!empty($id)){
+            $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga,merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.merk='$id' ORDER BY id DESC")->result();
             // $data = $this->db->get_where("produk", ['id' => $id])->result();
-        }else if(!empty($kategori) && empty($id)){
-            $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.kategori='$kategori' ORDER BY id DESC")->result();
-            // $data = $this->db->get_where("produk", ['kategori' => $kategori])->row_array();
-        }else if(!empty($kategori) && !empty($id)){
-            // $data = $this->db->get_where("produk", ['id' => $id,'kategori' => $kategori])->row_array();
-            $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek WHERE produk.merk='$id'AND produk.kategori='$kategori' ORDER BY id DESC")->result();
         }else{
-            $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga, produk.jumlah, produk.kategori, merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek ORDER BY id DESC")->result();
+            $hasil=$this->db->query("SELECT produk.id, produk.nama, produk.keterangan, produk.gambar, produk.harga,merek.nama as merek, produk.merk as merek1 FROM produk INNER JOIN merek ON produk.merk=merek.id_merek ORDER BY id DESC")->result();
             // $data = $this->db->get("produk")->result();
         }
      

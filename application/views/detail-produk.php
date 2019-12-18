@@ -99,38 +99,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="col-lg-6 col-md-6 mb-5">
             <div class="card-info">
               <div class="card-title"><?php echo $d->nama;?></div>
-              <div class="card-merk"><?php echo $d->merek;?></div>
+              <div class="card-merk"><span class="icon-circle"></span><?php echo $d->merek;?></div>
               <div class="d-flex">
                 <!-- <span class="icon-circle icon-green"></span> -->
-                <!-- <span class="card-tag" ><?php echo $d->kategori;?></span> -->
+                <!-- <span class="card-tag" ><?php echo $d->merek;?></span> -->
 
                 <!-- Iconnya -->
-                <span class="icon-circle <?php  
-                $t=$d->kategori;
-                if($t==1){
-                  echo "icon-green"; //diganti class yang kalian bikin
-                }elseif($t==2){
-                  echo "icon-green";
-                }elseif($t==3){
-                  echo "icon-green";
-                }elseif($t==4){
-                  echo "icon-green";
-                }?>"></span>
+              
 
-                <span class="card-tag">
-                <?php  
-                $t=$d->kategori;
-                if($t==1){
-                  echo "Motor";
-                }elseif($t==2){
-                  echo "Mobil";
-                }elseif($t==3){
-                  echo "Truk";
-                }elseif($t==4){
-                  echo "Aksesoris";
-                }?>
-
-                </span>
+                
               </div>
               <div class="card-isi"><?php echo $d->keterangan;?></div>
               <div class="card-price"><strong>Rp. <?php echo $d->harga;?></strong></div>    
@@ -177,17 +154,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="card-title "><?php echo $b->nama;?> </div> 
                 <div class="d-flex">
                     <span class="col-md-6 text-left card-merk"><?php echo $b->merek;?></span>
-                    <span class="col-md-6 text-center card-tag"><?php  
-                    $t=$b->kategori;
-                    if($t==1){
-                      echo "Motor";
-                    }elseif($t==2){
-                      echo "Mobil";
-                    }elseif($t==3){
-                      echo "Truk";
-                    }elseif($t==4){
-                      echo "Aksesoris";
-                    }?></span>
                   </div> 
                 <div class="card-price"><?php echo $b->harga;?></div>
               </div>

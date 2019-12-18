@@ -30,26 +30,26 @@ class Halaman_produk extends CI_Controller {
 	 */
 	public function index()
 	{	
-		$data['mobil'] = $this->m_data->getDaftarMobil();
-		$data['motor'] = $this->m_data->getDaftarMotor();
-		$data['truck'] = $this->m_data->getDaftarTruck();
-		$data['aksesoris'] = $this->m_data->getDaftarAksesoris();
-		$this->load->view('halaman_produk',$data);
+		// $data['mobil'] = $this->m_data->getDaftarMobil();
+		// $data['motor'] = $this->m_data->getDaftarMotor();
+		// $data['truck'] = $this->m_data->getDaftarTruck();
+		$data['merek'] = $this->m_data->get_merek();
+		$this->load->view('halaman_produk2',$data);
 	}
 	public function detail(){
 		$id = $this->uri->segment(3);
 		$data['hasil'] = $this->m_data->getDataDetil($id);
 		$this->load->view('detail-produk',$data);
 	}
-	public function kategori(){
-		$data['merek_mobil'] = $this->m_data->getMerekMobil();
-		$data['merek_motor'] = $this->m_data->getMerekMotor();
-		$data['merek_truck'] = $this->m_data->getMerekTruck();
-		$data['merek_aksesoris'] = $this->m_data->getMerekAksesoris();
-		$this->load->view('kategori',$data);
-	}
-	public function data_json_produk(){
-		header('Content-Type: application/json');
-    	echo $this->m_data->getDataProduk();
-    }
+	// public function kategori(){
+	// 	$data['merek_mobil'] = $this->m_data->getMerekMobil();
+	// 	$data['merek_motor'] = $this->m_data->getMerekMotor();
+	// 	$data['merek_truck'] = $this->m_data->getMerekTruck();
+	// 	$data['merek_aksesoris'] = $this->m_data->getMerekAksesoris();
+	// 	$this->load->view('kategori',$data);
+	// }
+	// public function data_json_produk(){
+	// 	header('Content-Type: application/json');
+    // 	echo $this->m_data->getDataProduk();
+    // }
 }
