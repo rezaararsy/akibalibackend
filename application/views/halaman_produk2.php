@@ -48,7 +48,7 @@
 
                     <div class="col-5 ">
                         <div class="site-logo black">
-                            <a href="index.html" class="font-weight-bold">AKI 24 Jam Bali</a>
+                            <a href="<?php echo base_url(). ''; ?>" class="font-weight-bold">AKI 24 Jam Bali</a>
                         </div>
                     </div>
                     <div class="col-6 text-right topnav" id="myTopNav">

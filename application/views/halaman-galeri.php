@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
               <div class="col-5 ">
                 <div class="site-logo black">
-                  <a href="<?php echo base_url(). 'index.php/Welcome'; ?>" class="font-weight-bold">AKI 24 Jam Bali</a>
+                  <a href="<?php echo base_url(). ''; ?>" class="font-weight-bold">AKI 24 Jam Bali</a>
                 </div>
               </div>
               <div class="col-6 text-right topnav" id="myTopNav">
@@ -122,19 +122,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
     </div> <!-- END .site-section -->
 
-    <footer class="site-footer">
-        <div class="row mt-5 align-items-center justify-content-center text-center">
-            <div class="col-md-12">
-                <p>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy;<script>document.write(new Date().getFullYear());</script> AKI 24 Jam Bali
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              </p>
-            </div>
-          </div>
-    </footer>
-
+<footer class="site-footer">
+    <div class="row align-items-center justify-content-center text-center">
+        <div class="col-md-12">
+            <p>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> AKI 24 Jam Bali
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
     </div>
+</footer>
 
     <script src="<?php echo base_url();?>asset2/js/jquery-3.3.1.min.js"></script>
     <script src="<?php echo base_url();?>asset2/js/jquery-migrate-3.0.0.js"></script>
