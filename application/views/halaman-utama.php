@@ -68,10 +68,10 @@
               <span class="d-inline-block d-lg-block"><a href="#" class="text-white site-menu-toggle js-menu-toggle py-5 text-white"><span class="icon-menu h3 text-white"></span></a></span>
               <nav class="site-navigation text-right ml-auto d-none d-lg-none" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                <li class="active"><a href="index.html" class="nav-link">Beranda</a></li>
-                <li><a href="produk-kategori.html" class="nav-link">Produk</a></li>
-                <li><a href="galeri.html" class="nav-link">Galeri</a></li>
-                <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+                <li class="active"><a href="<?php echo base_url(); ?>" class="nav-link">Beranda</a></li>
+                <li><a href="<?php echo base_url(). 'index.php/halaman_produk'; ?>" class="nav-link">Produk</a></li>
+                <li><a href="<?php echo base_url(). 'index.php/halaman_galeri'; ?>" class="nav-link">Galeri</a></li>
+                <li><a href="<?php echo base_url(). 'index.php/kontak'; ?>" class="nav-link">Kontak</a></li>
                 </ul>
               </nav>
             </div>
@@ -154,7 +154,7 @@
             
             <h2 class="h4 mb-4">Tentang Kami</h2>
             <p>Menjual Segala Macam Jenis Aki Untuk Segala Kendaraan. Baik Aki Mobil, Sepeda Motor, Truk, Bus, Kapal, Dan Lainnya. Pemasangan Gratis. Cek Aki Gratis. Menerima Pengiriman Di Wilayah Bali.</p>
-            <p><a href="produk.html" class="btn btn-primary text-white px-5">Produk Kami</a></p>
+            <p><a href="<?php echo base_url(). 'index.php/halaman_produk'; ?>" class="btn btn-primary text-white px-5">Produk Kami</a></p>
           </div>
 
           <div class="col-md-2">

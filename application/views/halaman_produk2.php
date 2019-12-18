@@ -71,10 +71,10 @@
                                     class="icon-menu h3 text-black"></span></a></span>
                         <nav class="site-navigation text-right ml-auto d-none d-lg-none" role="navigation">
                             <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                                <li><a href="index.html" class="nav-link">Beranda</a></li>
-                                <li class="active"><a href="produk.html" class="nav-link">Produk</a></li>
-                                <li><a href="galeri.html" class="nav-link">Galeri</a></li>
-                                <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+                                <li><a href="<?php echo base_url(); ?>" class="nav-link">Beranda</a></li>
+                                <li class="active"><a href="<?php echo base_url(). 'index.php/halaman_produk'; ?>" class="nav-link">Produk</a></li>
+                                <li><a href="<?php echo base_url(). 'index.php/halaman_galeri'; ?>" class="nav-link">Galeri</a></li>
+                                <li><a href="<?php echo base_url(). 'index.php/kontak'; ?>" class="nav-link">Kontak</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -83,9 +83,10 @@
         </header>
 
         <!-- Tabel Kategori-->
+        <div class="site-section">
         <div class="container martop">
             <div class="row col-md-12">
-                <div class="site-section col-sm-12 col-md-4 col-lg-3">
+                <div class="site-section col-sm-12 col-md-4 col-lg-3" style="padding-top: 0px">
                     <div class="container mb-4">
                         <div class="category-card"
                             style="min-width: min-content; padding: 20px; background-color: #fff;  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); min-height: 200px;">
@@ -163,7 +164,7 @@
                 </div>
 
                 <!--Kategori Mobil-->
-                <div class="site-section col-sm-12 col-md-8 col-lg-9">
+                <div class="site-section col-sm-12 col-md-8 col-lg-9" style="padding-top: 0px">
                     <div class="container mb-4">
                         <div class="col-md-12">
                             <div class="row animated zoomIn" id="kontenya">
@@ -185,6 +186,7 @@
                 </div>
             </div>
         </div>
+                                </div>
         <!-- END .site-section -->
 
 

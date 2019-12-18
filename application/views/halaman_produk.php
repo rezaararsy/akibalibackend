@@ -48,7 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
           <div class="col-5 ">
             <div class="site-logo black">
-              <a href="<?php echo base_url(). 'index.php/Welcome'; ?>" class="font-weight-bold">AKI 24 Jam Bali</a>
+              <a href="<?php echo base_url(). ''; ?>" class="font-weight-bold">AKI 24 Jam Bali</a>
             </div>
           </div>
           <div class="col-6 text-right topnav" id="myTopNav">
@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   class="icon-menu h3 text-black"></span></a></span>
             <nav class="site-navigation text-right ml-auto d-none d-lg-none" role="navigation">
               <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                <li><a href="<?php echo base_url(). 'index.php/Welcome'; ?>" class="nav-link">Beranda</a></li>
+                <li><a href="<?php echo base_url(). ''; ?>" class="nav-link">Beranda</a></li>
                 <li class="active"><a href="<?php echo base_url(). 'index.php/halaman_produk'; ?>"
                     class="nav-link">Produk</a></li>
                 <li><a href="<?php echo base_url(). 'index.php/halaman_galeri'; ?>" class="nav-link">Galeri</a></li>

@@ -24,8 +24,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="<?php echo base_url();?>asset2/css/style.css">
 
-    <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css" />
 
   </head>
 
@@ -87,7 +85,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="row">
               <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo base_url(). 'index.php/Welcome'; ?>" style="color: #01d28e">Beranda</a></li>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url(). 'index.php/Welcome'; ?>">Beranda</a></li>
                     <li class="breadcrumb-item"><a href="<?php echo base_url(). 'index.php/halaman_produk'; ?>">Produk</a></li>
                     <li class="breadcrumb-item active" aria-current="page"><?php echo $d->nama;?></li>
                   </ol>
@@ -174,7 +172,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
          
 
           <div class="col-lg-3 col-md-3 mb-4">
-              <a href="<?php echo base_url(); ?>index.php/halaman_produk/kategori">
+              <a href="<?php echo base_url(); ?>index.php/halaman_produk">
                 <img src="<?php echo base_url();?>asset2/images/arrow.png" alt="Image" class="img-card-next" style="background-position: center;"> 
                 <h5 style="margin-left: 35px; margin-top: 10px;">Lainnya</h5>
               </a>
@@ -219,9 +217,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <script src="<?php echo base_url();?>asset2/js/main.js"></script>
 
-    <!-- UIkit JS -->
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
 
   </body>
 
