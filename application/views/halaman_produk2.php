@@ -92,9 +92,9 @@
                             <div class="uk-margin">
                                 <form class="uk-search uk-search-default">
                                     <span uk-search-icon></span>
-                                    <input class="uk-search-input" type="search" placeholder="Cari...">
+                                    <input class="uk-search-input" type="search" id="inputan" name="inputan" placeholder="Cari...">
                                 </form>
-                                </div>
+                            </div>
                             <h4 style="margin-top: 0"><strong>Merek</strong></h4>
                             <ul class="daftar-merek">
                                 <li>
@@ -256,6 +256,26 @@
                     }
                 });
             }
+
+            $('#inputan').keydown(function (e){
+                var pencariannya = document.getElementById("inputan").value;
+                $('#kontenya').html("");
+                urlnya = "<?php echo base_url();?>index.php/item?search=" + pencariannya;
+
+                $.ajax({
+                    url: urlnya,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (response) {
+                        console.log(response)
+                        $.each(response, function (key, value) {
+                            // $("#kontenya").append('<div class="col-lg-6 col-md-6 col-sm-6 col-12 mb-4"><div class="uk-card"><a href="<?php echo base_url(); ?>index.php/halaman_produk/detail/' + value.id + '"><img src="<?php echo base_url();?>' + value.gambar + '" alt="Image"class="img-card"><div class="card-container"><div class="card-title ">' + value.nama + '</div><div class=" text-left card-merk mb-4">' + value.merek + '</div><div class=" text-center card-tag">' + jenis + '</div><div class="card-price">Rp. ' + value.harga + '</div></div></a></div></div>');
+                            $("#kontenya").append('<div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-4"><div class="uk-card"><a href="<?php echo base_url(); ?>index.php/halaman_produk/detail/' + value.id + '"><img src="<?php echo base_url();?>' + value.gambar + '" alt="Image" class="img-card"><div class="card-container"><div class="card-title ">' + value.nama + '</div><div class=" text-left card-merk">' + value.merek + '</div><div class="card-price">Rp. ' + value.harga + '</div></div></a></div></div>');
+
+                        });
+                    }
+                });
+            })
         </script>
 </body>
 
