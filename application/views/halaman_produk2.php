@@ -72,9 +72,12 @@
                         <nav class="site-navigation text-right ml-auto d-none d-lg-none" role="navigation">
                             <ul class="site-menu main-menu js-clone-nav ml-auto ">
                                 <li><a href="<?php echo base_url(); ?>" class="nav-link">Beranda</a></li>
-                                <li class="active"><a href="<?php echo base_url(). 'index.php/halaman_produk'; ?>" class="nav-link">Produk</a></li>
-                                <li><a href="<?php echo base_url(). 'index.php/halaman_galeri'; ?>" class="nav-link">Galeri</a></li>
-                                <li><a href="<?php echo base_url(). 'index.php/kontak'; ?>" class="nav-link">Kontak</a></li>
+                                <li class="active"><a href="<?php echo base_url(). 'index.php/halaman_produk'; ?>"
+                                        class="nav-link">Produk</a></li>
+                                <li><a href="<?php echo base_url(). 'index.php/halaman_galeri'; ?>"
+                                        class="nav-link">Galeri</a></li>
+                                <li><a href="<?php echo base_url(). 'index.php/kontak'; ?>" class="nav-link">Kontak</a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -84,30 +87,31 @@
 
         <!-- Tabel Kategori-->
         <div class="site-section">
-        <div class="container martop">
-            <div class="row col-md-12">
-                <div class="site-section col-sm-12 col-md-4 col-lg-3" style="padding-top: 0px">
-                    <div class="container mb-4">
-                        <div class="category-card"
-                            style="min-width: min-content; padding: 20px; background-color: #fff;  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); min-height: 200px;">
-                            <div class="uk-margin">
-                                <form class="uk-search uk-search-default">
-                                    <span uk-search-icon></span>
-                                    <input class="uk-search-input" type="search" id="inputan" name="inputan" placeholder="Cari...">
-                                </form>
-                            </div>
-                            <h4 style="margin-top: 0"><strong>Merek</strong></h4>
-                            <ul class="daftar-merek">
-                                <li>
-                                    <a a onclick="showData(0)" style="color: coral;">Semua</a>
-                                </li>
-                                <?php
+            <div class="container martop">
+                <div class="row col-md-12">
+                    <div class="site-section col-sm-12 col-md-4 col-lg-3" style="padding-top: 0px">
+                        <div class="container mb-4">
+                            <div class="category-card"
+                                style="min-width: min-content; padding: 20px; background-color: #fff;  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); min-height: 200px;">
+                                <div class="uk-margin">
+                                    <form class="uk-search uk-search-default">
+                                        <span uk-search-icon></span>
+                                        <input class="uk-search-input" type="search" id="inputan" name="inputan"
+                                            placeholder="Cari...">
+                                    </form>
+                                </div>
+                                <h4 style="margin-top: 0"><strong>Merek</strong></h4>
+                                <ul class="daftar-merek">
+                                    <li onclick="switchColors(this);">
+                                        <a a onclick="showData(0)" style="color: red;">Semua</a>
+                                    </li>
+                                    <?php
                                     foreach($merek as $d)
                                     {                               
-                                        echo "<li><a onclick='showData($d->id_merek)'>$d->nama</a></li>";                
+                                        echo "<li onclick='switchColors(this);'><a onclick='showData($d->id_merek)'>$d->nama</a></li>";                
                                     }
                                 ?>
-                                <!-- <li>
+                                    <!-- <li>
                                     <a href="" style="color: cadetblue;">Yuasa Amazing</a>
                                 </li>
                                 <li>
@@ -116,8 +120,8 @@
                                 <li>
                                     <a href="" style="color: crimson;">Incoe</a>
                                 </li> -->
-                            </ul>
-                            <!-- <ul uk-accordion>
+                                </ul>
+                                <!-- <ul uk-accordion>
               <li class="uk-open">
                   <a class="uk-accordion-title" style="color: #01d28e;" href="#">Mobil</a>
                   <div class="uk-accordion-content">
@@ -159,16 +163,16 @@
                   </div>
               </li>
           </ul> -->
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!--Kategori Mobil-->
-                <div class="site-section col-sm-12 col-md-8 col-lg-9" style="padding-top: 0px">
-                    <div class="container mb-4">
-                        <div class="col-md-12">
-                            <div class="row animated zoomIn" id="kontenya">
-                                <!-- <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-4">
+                    <!--Kategori Mobil-->
+                    <div class="site-section col-sm-12 col-md-8 col-lg-9" style="padding-top: 0px">
+                        <div class="container mb-4">
+                            <div class="col-md-12">
+                                <div class="row animated zoomIn" id="kontenya">
+                                    <!-- <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-4">
                                     <div class="uk-card">
                                         <a href="produk-detail.html">
                                             <img src="images/vs.jpg" alt="Image" class="img-card">
@@ -180,13 +184,13 @@
                                         </a>
                                     </div>
                                 </div> -->
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-                                </div>
         <!-- END .site-section -->
 
 
@@ -251,15 +255,19 @@
                     success: function (response) {
                         console.log(response)
                         $.each(response, function (key, value) {
+                            var hargae = "Rp. " + value.harga;
+                            if (value.harga == 0) {
+                                hargae = "";
+                            }
                             // $("#kontenya").append('<div class="col-lg-6 col-md-6 col-sm-6 col-12 mb-4"><div class="uk-card"><a href="<?php echo base_url(); ?>index.php/halaman_produk/detail/' + value.id + '"><img src="<?php echo base_url();?>' + value.gambar + '" alt="Image"class="img-card"><div class="card-container"><div class="card-title ">' + value.nama + '</div><div class=" text-left card-merk mb-4">' + value.merek + '</div><div class=" text-center card-tag">' + jenis + '</div><div class="card-price">Rp. ' + value.harga + '</div></div></a></div></div>');
-                            $("#kontenya").append('<div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-4"><div class="uk-card"><a href="<?php echo base_url(); ?>index.php/halaman_produk/detail/' + value.id + '"><img src="<?php echo base_url();?>' + value.gambar + '" alt="Image" class="img-card"><div class="card-container"><div class="card-title ">' + value.nama + '</div><div class=" text-left card-merk">' + value.merek + '</div><div class="card-price">Rp. ' + value.harga + '</div></div></a></div></div>');
+                            $("#kontenya").append('<div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-4"><div class="uk-card"><a href="<?php echo base_url(); ?>index.php/halaman_produk/detail/' + value.id + '"><img src="<?php echo base_url();?>' + value.gambar + '" alt="Image" class="img-card"><div class="card-container"><div class="card-title ">' + value.nama + '</div><div class=" text-left card-merk">' + value.merek + '</div><div class="card-price">' + hargae + '</div></div></a></div></div>');
 
                         });
                     }
                 });
             }
 
-            $('#inputan').keydown(function (e){
+            $('#inputan').keydown(function (e) {
                 var pencariannya = document.getElementById("inputan").value;
                 $('#kontenya').html("");
                 urlnya = "<?php echo base_url();?>index.php/item?search=" + pencariannya;
@@ -271,13 +279,25 @@
                     success: function (response) {
                         console.log(response)
                         $.each(response, function (key, value) {
+                            var hargae = "Rp. " + value.harga;
+                            if (value.harga == 0) {
+                                hargae = "";
+                            }
                             // $("#kontenya").append('<div class="col-lg-6 col-md-6 col-sm-6 col-12 mb-4"><div class="uk-card"><a href="<?php echo base_url(); ?>index.php/halaman_produk/detail/' + value.id + '"><img src="<?php echo base_url();?>' + value.gambar + '" alt="Image"class="img-card"><div class="card-container"><div class="card-title ">' + value.nama + '</div><div class=" text-left card-merk mb-4">' + value.merek + '</div><div class=" text-center card-tag">' + jenis + '</div><div class="card-price">Rp. ' + value.harga + '</div></div></a></div></div>');
-                            $("#kontenya").append('<div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-4"><div class="uk-card"><a href="<?php echo base_url(); ?>index.php/halaman_produk/detail/' + value.id + '"><img src="<?php echo base_url();?>' + value.gambar + '" alt="Image" class="img-card"><div class="card-container"><div class="card-title ">' + value.nama + '</div><div class=" text-left card-merk">' + value.merek + '</div><div class="card-price">Rp. ' + value.harga + '</div></div></a></div></div>');
+                            $("#kontenya").append('<div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-4"><div class="uk-card"><a href="<?php echo base_url(); ?>index.php/halaman_produk/detail/' + value.id + '"><img src="<?php echo base_url();?>' + value.gambar + '" alt="Image" class="img-card"><div class="card-container"><div class="card-title ">' + value.nama + '</div><div class=" text-left card-merk">' + value.merek + '</div><div class="card-price"> ' + hargae + '</div></div></a></div></div>');
 
                         });
                     }
                 });
             })
+        </script>
+        <script>
+            function switchColors(element) {
+                links = document.getElementsByTagName("li");
+                for (var i = 0; i < links.length; i++)
+                    links.item(i).style.color = 'black';
+                element.style.color = 'coral';
+            } 
         </script>
 </body>
 

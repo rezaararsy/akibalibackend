@@ -111,7 +111,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 
               <!-- </div> -->
               <div class="card-isi"><?php echo $d->keterangan;?></div>
-              <div class="card-price"><strong>Rp. <?php echo $d->harga;?></strong></div>    
+              <div class="card-price"><strong><?php 
+              if($d->harga==0){
+                echo "";
+              }else{
+                echo "Rp. ".$d->harga;
+              }
+              ?></strong></div>    
             </div>
           </div> 
         </div>
@@ -156,7 +162,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="d-flex">
                     <span class="col-md-6 text-left card-merk"><?php echo $b->merek;?></span>
                   </div> 
-                <div class="card-price"><?php echo $b->harga;?></div>
+                <div class="card-price"><?php if($b->harga==0){
+                echo "";
+                }else{
+                  echo "Rp. ".$b->harga;
+                }?></div>
               </div>
             </a>
             </div>
