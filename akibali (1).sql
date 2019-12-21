@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 17 Des 2019 pada 14.49
+-- Waktu pembuatan: 21 Des 2019 pada 22.01
 -- Versi server: 10.1.34-MariaDB
 -- Versi PHP: 5.6.37
 
@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `galeri` (
   `id` int(11) NOT NULL,
   `nama` varchar(100) NOT NULL,
-  `gambar` varchar(200) NOT NULL
+  `gambar` varchar(2000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `galeri` (
 --
 
 INSERT INTO `galeri` (`id`, `nama`, `gambar`) VALUES
-(2, 'Woke', '/asset/img/Woke.JPG');
+(2, 'Woke1', '/asset/img/Woke1.jpg');
 
 -- --------------------------------------------------------
 
@@ -57,7 +57,7 @@ CREATE TABLE `merek` (
 --
 
 INSERT INTO `merek` (`id_merek`, `nama`) VALUES
-(10, 'GA'),
+(10, 'GAA'),
 (12, 'Yuasa'),
 (13, 'Xtra'),
 (17, 'GS'),
@@ -88,7 +88,7 @@ CREATE TABLE `produk` (
 
 INSERT INTO `produk` (`id`, `nama`, `keterangan`, `gambar`, `harga`, `merk`, `tgl`) VALUES
 (6, 'tes', '<p>wqwq</p>', '/asset/img/pwqwqp.jpg', 111, 12, '2019-12-11 05:00:15'),
-(8, 'SS', '<p>qwqw</p>', '/asset/img/pqwqwp.png', 1212, 19, '2019-12-17 13:48:56');
+(8, 'SS2', '<p>qwqwqqqqq</p>', '/asset/img/SS2.jpg', 12122222, 19, '2019-12-21 21:00:39');
 
 -- --------------------------------------------------------
 

@@ -61,7 +61,7 @@ function get_sub_category($category_id){
   function getDataProduk(){
     $this->datatables->select('id,nama,keterangan,gambar,harga');
     $this->datatables->from('produk');
-    $this->datatables->add_column('view', '<a href="javascript:void(0);" class="hapus_record btn btn-danger" data-kode="$1" data-filenya="$4">Hapus<i class="fa fa-fw fa-trash"></i></a>','id,nama,harga,gambar,keterangan');
+    $this->datatables->add_column('view','<a href="javascript:void(0);" class="edit_record btn btn-success" data-kode="$1" data-nama="$2" data-harga="$3" data-keterangan="$5" data-filenya="$4">Edit<i class="fa fa-fw fa-edit"></i></a> <a href="javascript:void(0);" class="hapus_record btn btn-danger" data-kode="$1" data-filenya="$4">Hapus<i class="fa fa-fw fa-trash"></i></a>','id,nama,harga,gambar,keterangan');
     $this->datatables->add_column('link', '<img src="$1"style="height:100px;width:100px;" />','gambar');
     return $this->datatables->generate();
   }
@@ -74,7 +74,7 @@ function get_sub_category($category_id){
   function getDataGaleri(){
     $this->datatables->select('id,nama,gambar');
     $this->datatables->from('galeri');
-    $this->datatables->add_column('view', ' <a href="javascript:void(0);" class="hapus_record btn btn-danger" data-kode="$1" data-filenya="$3">Hapus<i class="fa fa-fw fa-trash"></i></a>','id,nama,gambar');
+    $this->datatables->add_column('view',  '<a href="javascript:void(0);" class="edit_record btn btn-success" data-kode="$1" data-nama="$2" data-filenya="$3">Edit<i class="fa fa-fw fa-edit"></i></a>  <a href="javascript:void(0);" class="hapus_record btn btn-danger" data-kode="$1" data-filenya="$3">Hapus<i class="fa fa-fw fa-trash"></i></a>','id,nama,gambar');
     $this->datatables->add_column('link', '<img src="$1"style="height:100px;width:100px;" />','gambar');
     return $this->datatables->generate();
   }

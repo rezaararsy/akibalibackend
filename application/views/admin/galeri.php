@@ -78,3 +78,30 @@
         </div>
     </div>
 </form>
+
+<form id="add-row-form" action="<?php echo base_url().'index.php/galeri/updateGaleri'?>" method="post"
+    enctype="multipart/form-data">
+    <div class="modal fade" id="ModalUpdateGaleri" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="id">
+                    <input type="hidden" name="filenya">
+                    <label for="fname">Masukan Keterangan Gambar</label>
+                    <input class="form-control data" type="text" id="fname" name="nama" placeholder="" required="">
+                    <label for="fname">File</label>
+                    <input type="file" class="form-control data" id="image-source" name="foto" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" id="add-row" class="btn btn-success">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

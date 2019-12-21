@@ -42,18 +42,45 @@ class Produk extends CI_Controller {
         $this->db->delete('produk');
         unlink($filenya); 
         redirect('/produk');     
+    }
+     
+    function update(){ 
+          $config['upload_path']          = './asset/img/';
+          $config['allowed_types']        = 'gif|jpg|png|jpeg';
+          $config['file_name']       	 	= $this->input->post('nama');
+          $config['max_size']             = 4096000;
+          echo $this->input->post('foto');
+          $linke = '';
+  
+          $this->load->library('upload', $config);
+  
+          if ($this->upload->do_upload('foto')){
+              // $error = array('error' => $this->upload->display_errors());
+              // echo $error;
+              $filenya='.'.$this->input->post('filenya');
+              unlink($filenya); 
+              $data = array('upload_data' => $this->upload->data());
+              $nama = $this->upload->data('file_name');
+              $linke = '/asset/img/'.$nama;
+              
+          }else{
+              echo $this->upload->display_errors();
+              $linke = $this->input->post('filenya');
           }
-          function update(){ 
+
         $kode=$this->input->post('id');
         $data=array(
-            'nama_produk' => $this->input->post('nama_produk'),
-            'jml_stock' => $this->input->post('jml'),
-            'harga' => $this->input->post('harga')
+          'nama' => $this->input->post('nama'),
+          'keterangan' => $this->input->post('keterangan'),
+          'harga' => $this->input->post('harga'),
+          'gambar' => $linke
         );
         $this->db->where('id',$kode);
         $this->db->update('produk', $data);
         redirect('/produk');
-          }
+    }
+
+          
           public function inputDataProduksi()
           {	
       

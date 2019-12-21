@@ -21,6 +21,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
     <link rel="stylesheet" href="<?php echo base_url();?>asset/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
     <script src="https://cdn.ckeditor.com/ckeditor5/12.2.0/classic/ckeditor.js"></script>
+    <link rel="stylesheet" href="<?php echo base_url();?>asset/plugins/summernote/summernote-bs4.css">
 </head>
 
 <body class="hold-transition sidebar-mini">

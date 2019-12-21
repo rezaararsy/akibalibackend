@@ -33,6 +33,10 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
+<script src="<?php echo base_url();?>asset/plugins/summernote/summernote-bs4.min.js"></script>
+<script>
+
+</script>
 
 <script>
     $("#menu-toggle").click(function (e) {
@@ -75,6 +79,15 @@
         // $('#ModalHapus').modal('show');
         // $('[name="id"]').val(kode);
     });
+    $('#table_galeri').on('click', '.edit_record', function () {
+        var kode = $(this).data('kode');
+        var nama = $(this).data('nama');
+        var filenya = $(this).data('filenya');
+        $('#ModalUpdateGaleri').modal('show');
+        $('[name="id"]').val(kode);
+        $('[name="nama"]').val(nama);
+        $('[name="filenya"]').val(filenya);
+    });
 
 </script>
 <script type="text/javascript">
@@ -110,6 +123,14 @@
     });
 </script>
 <script type="text/javascript">
+
+    // var editor;
+    // ClassicEditor
+    //     .create(document.querySelector('#editor'))
+    //     .then(editor => {
+    //         editor = editor;
+    //     })
+
     $(document).ready(function () {
         $('#table_produk').DataTable({
             dom: 'Bfrtip',
@@ -160,17 +181,38 @@
     });
 
     $('#table_produk').on('click', '.edit_record', function () {
+
+        $(function () {
+
+            // Summernote
+            $('.textarea').summernote();
+        })
+        // $('#editor').html('');
+        //e.preventDefault();
+
+
         var kode = $(this).data('kode');
         var nama = $(this).data('nama');
         var harga = $(this).data('harga');
-        var gambar = $(this).data('gambar');
+        var filenya = $(this).data('filenya');
         var keterangan = $(this).data('keterangan');
         $('#ModalUpdate').modal('show');
         $('[name="id"]').val(kode);
         $('[name="nama"]').val(nama);
         $('[name="harga"]').val(harga);
-        $('[name="gambar"]').val(gambar);
+        $('[name="filenya"]').val(filenya);
         $('[name="keterangan"]').val(keterangan);
+        $('.textarea').summernote('code', keterangan);
+        //$('.textarea').html(keterangan);
+        //document.getElementById("teksnya").value = keterangan;
+        //$("#teksnya").append("<b>Appended text</b>");
+        //$("p").append("<b>Appended text</b>");
+        //$('#editor').html(keterangan);
+        // editor.data.set(keterangan);
+        // $("#editor").html("<p>Testing</p>");
+        // alert(CKEDITOR.instances['#editor'].setData(keterangan);
+
+
     });
 </script>
 <!-- <script type="text/javascript">
@@ -200,6 +242,7 @@
 
     });
 </script> -->
+
 </body>
 
 </html>

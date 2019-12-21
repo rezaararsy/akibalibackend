@@ -81,7 +81,8 @@
     </div>
 </form>
 
-<form id="add-row-form" action="<?php echo base_url().'index.php/produk/update'?>" method="post">
+<form id="add-row-form" action="<?php echo base_url().'index.php/produk/update'?>" method="post"
+    enctype="multipart/form-data">
     <div class="modal fade" id="ModalUpdate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
@@ -92,21 +93,22 @@
                 </div>
                 <div class="modal-body">
                     <input type="hidden" name="id">
+                    <input type="hidden" name="filenya">
                     <label for="fname">Masukan Nama Produk</label>
                     <input class="form-control data" type="text" id="fname" name="nama" placeholder="" required="">
 
-                    <label for="fname">Masukkan Jumlah </label>
-                    <input class="form-control data" type="number" id="fname" name="jumlah" placeholder="">
-
                     <label for="fname">Keterangan</label>
-                    <input class="form-control data" type="text" id="fname" name="keterangan" placeholder="">
+                    <!-- <input class="form-control data" type="text" id="fname" name="keterangan" placeholder=""> -->
+                    <textarea name="keterangan" class="textarea" id="teksnya">
+                    </textarea>
 
 
                     <label for="fname">Harga</label>
                     <input class="form-control data" type="number" id="fname" name="harga" placeholder="">
 
                     <label for="fname">Gambar</label>
-                    <input class="form-control data" type="file" id="fname" name="gambar" placeholder="">
+                    <input class="form-control data" type="file" id="fname" name="foto" placeholder="">
+
 
                 </div>
                 <div class="modal-footer">
@@ -117,3 +119,11 @@
         </div>
     </div>
 </form>
+<!-- <script>
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .catch(error => {
+            console.error(error);
+        });
+
+</script> -->
