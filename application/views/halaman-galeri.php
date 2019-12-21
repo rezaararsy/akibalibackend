@@ -62,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
 
               <div class="col-1 text-left topbar black">
-                <span class="d-inline-block d-lg-block"><a href="#" class="text-white site-menu-toggle js-menu-toggle py-5 text-black"><span class="icon-menu h3 text-black"></span></a></span>
+                <span class="d-inline-block d-lg-block"><div class="text-white site-menu-toggle js-menu-toggle py-5 text-black"><span class="icon-menu h3 text-black"></span></div></span>
                 <nav class="site-navigation text-right ml-auto d-none d-lg-none" role="navigation">
                   <ul class="site-menu main-menu js-clone-nav ml-auto ">
                   <li><a href="<?php echo base_url(). 'index.php/Welcome'; ?>" class="nav-link">Beranda</a></li>
