@@ -40,49 +40,40 @@
             </div>
             <div class="site-mobile-menu-body"></div>
         </div>
+        
 
         <header class="site-navbar site-navbar-target" role="banner">
 
-            <div class="container">
-                <div class="row align-items-center position-relative ">
+          <div class="container">
+            <div class="row align-items-center position-relative ">
 
-                    <div class="col-5 ">
-                        <div class="site-logo black">
-                            <a href="<?php echo base_url(). ''; ?>" class="font-weight-bold">AKI 24 Jam Bali</a>
-                        </div>
-                    </div>
-                    <div class="col-6 text-right topnav" id="myTopNav">
-                        <ul class="menu text-right">
-                            <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-4"
-                                    href="<?php echo base_url(); ?>">Beranda</a></li>
-                            <li class="menu-item"><a
-                                    class="btn-navi btn-navi-primary btn-navi-outline-black current py-3 px-3"
-                                    href="<?php echo base_url(). 'index.php/halaman_produk'; ?>">Produk</a></li>
-                            <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-3"
-                                    href="<?php echo base_url(). 'index.php/halaman_galeri'; ?>">Galeri</a></li>
-                            <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-3"
-                                    href="<?php echo base_url(). 'index.php/kontak'; ?>">Kontak</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-1 text-left topbar black">
-                        <span class="d-inline-block d-lg-block"><div
-                                class="text-white site-menu-toggle js-menu-toggle py-5 text-black"><span
-                                    class="icon-menu h3 text-black"></span></div></span>
-                        <nav class="site-navigation text-right ml-auto d-none d-lg-none" role="navigation">
-                            <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                                <li><a href="<?php echo base_url(); ?>" class="nav-link">Beranda</a></li>
-                                <li class="active"><a href="<?php echo base_url(). 'index.php/halaman_produk'; ?>"
-                                        class="nav-link">Produk</a></li>
-                                <li><a href="<?php echo base_url(). 'index.php/halaman_galeri'; ?>"
-                                        class="nav-link">Galeri</a></li>
-                                <li><a href="<?php echo base_url(). 'index.php/kontak'; ?>" class="nav-link">Kontak</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+              <div class="col-5 ">
+                <div class="site-logo black">
+                  <a href="<?php echo base_url(). ''; ?>" class="font-weight-bold">AKI 24 Jam Bali</a>
                 </div>
+              </div>
+              <div class="col-6 text-right topnav" id="myTopNav">
+                <ul class="menu text-right">
+                  <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-4" href="<?php echo base_url(); ?>">Beranda</a></li>
+                  <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black current py-3 px-3" href="<?php echo base_url(). 'index.php/halaman_produk'; ?>">Produk</a></li>
+                  <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-3" href="<?php echo base_url(). 'index.php/halaman_galeri'; ?>">Galeri</a></li>
+                  <li class="menu-item"><a class="btn-navi btn-navi-primary btn-navi-outline-black py-3 px-3" href="<?php echo base_url(). 'index.php/kontak'; ?>">Kontak</a></li>
+                </ul>
+              </div>
+
+              <div class="col-1 text-left topbar black">
+                <span class="d-inline-block d-lg-block"><div class="text-white site-menu-toggle js-menu-toggle py-5 text-black"><span class="icon-menu h3 text-black"></span></div></span>
+                <nav class="site-navigation text-right ml-auto d-none d-lg-none" role="navigation">
+                  <ul class="site-menu main-menu js-clone-nav ml-auto ">
+                  <li><a href="<?php echo base_url(). 'index.php/Welcome'; ?>" class="nav-link">Beranda</a></li>
+                  <li class="active"><a href="<?php echo base_url(). 'index.php/halaman_produk'; ?>" class="nav-link">Produk</a></li>
+                  <li><a href="<?php echo base_url(). 'index.php/halaman_galeri'; ?>" class="nav-link">Galeri</a></li>
+                  <li><a href="<?php echo base_url(). 'index.php/kontak'; ?>" class="nav-link">Kontak</a></li>
+                  </ul>
+                </nav>
+              </div>
             </div>
+          </div>
         </header>
 
         <!-- Tabel Kategori-->
