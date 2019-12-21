@@ -87,8 +87,9 @@
             <div class="col-md-12 text-center" style="margin-top:150px;">
               <h1 class="animated fadeInDown mb-4 text-white">Sedulur Makmur</h1>
               <p class="animated fadeInDown mb-0">Menjual Aki Original, Bergaransi, dan Harga Bersaing | Pengiriman 24 Jam</p>
-              <h6 class="animated fadeInDown mb-4">WhatsApp : 08123813654</h6>
+              <h6 class="animated fadeInDown mb-4">WhatsApp : 08123813654 | 085101409700</h6>
               <p><a href="#layanan" class="animated fadeInDown btn btn-primary btn-outline-white py-3 px-5 mb-5">Layanan Kami</a></p>
+              <a href=https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faki24jambali.com%2F&amp;src=sdkpreparse" class="animated fadeInDown btn btn-primary btn-outline-white py-3 px-5 mb-5">Bagikan</a>
             </div>
           </div>
         </div>

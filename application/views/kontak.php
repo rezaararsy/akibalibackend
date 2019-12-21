@@ -114,7 +114,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <span class="d-block text-black">Lokasi Toko:</span>
                   <span>Jln. Ngurah Rai 69 Kediri Tabanan</span></li>
                 <li class="d-block mb-3 animated fadeInDown"><span class="d-block text-black">Nomor Telepon:</span><span>08123813654 / 085101409700</span></li>
-                <li class="d-block mb-3 animated zoomIn"><a href="https://wa.me/628123813654?text=Halo%20AKI%20Bali%2024%20Jam%20Saya%20ingin%20bertanya" class="btn btn-primary text-white px-5">Whatsapp</span></a></li>
+                <li class="d-block mb-3 animated zoomIn"><a href="https://wa.me/628123813654?text=Halo%20AKI%20Bali%2024%20Jam%20Saya%20ingin%20bertanya" class="btn btn-primary text-white px-5">Whatsapp 1</span></a></li>
+                <li class="d-block mb-3 animated zoomIn"><a href="https://wa.me/6285101409700?text=Halo%20AKI%20Bali%2024%20Jam%20Saya%20ingin%20bertanya" class="btn btn-primary text-white px-5">Whatsapp 2</span></a></li>
                 <li class="d-block mb-3 animated zoomIn"><a href="https://goo.gl/maps/VnTqeve19ff3yGQ49" class="btn btn-primary text-white px-4">Buka Google Map</a></li>
               </ul>
             </div>
